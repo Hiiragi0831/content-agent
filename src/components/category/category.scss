@@ -1,0 +1,12 @@
+.category {
+    &__title {
+        color: $color-red;
+        font-size: 3rem;
+    }
+
+    &__icon {
+        svg {
+            fill: $color-red;
+        }
+    }
+}

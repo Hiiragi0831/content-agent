@@ -1,0 +1,33 @@
+mixin header
+    header.header
+        .container
+            .header__logo
+                +picture({
+                    path: `${baseDir}assets/images/header/logo`,
+                    ext: `png`,
+                })
+            .header__socials
+                a(href="#").header__socials_social
+                    +svg("watsup")
+                a(href="#").header__socials_social
+                    +svg("telegram")
+                a(href="#").header__socials_social
+                    +svg("vk")
+                a(href="#").header__socials_social
+                    +svg("tiktok")
+                a(href="#").header__socials_social
+                    +svg("youtube")
+                a(href="#").header__socials_social
+                    +svg("rutube")
+            .header__contacts
+                .header__contact-mail
+                    +svg("Ellipseforphoneandemail")
+                    +svg("email")
+                p E-mail
+                a(href="#") example@gmail.com
+                .header__contact-phone
+                    +svg("Ellipseforphoneandemail")
+                    +svg("telephone")
+                p Телефон:
+                a(href="#") +7(495) 331 33 67
+

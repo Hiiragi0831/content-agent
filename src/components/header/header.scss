@@ -1,0 +1,30 @@
+.header {
+    background-color: $color-black;
+    width: 100%;
+    height: vc(150);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    &__logo {
+        width: vc(349);
+        height: vc(22);
+    }
+
+    &__socials {
+        display: flex;
+        gap: vc(15);
+
+        &_social {
+            width: vc(37);
+            height: vc(37);
+        }
+    }
+
+    @include devices {
+        background-color: $color-red;
+    }
+}
