@@ -1,0 +1,40 @@
+mixin main
+    main.main
+        .container
+            .main__our-services
+                h2 Наши услуги
+                +svg ("arrow1")
+                .main__list
+                    ul
+                        li Съемки сторис
+                        li Съемки вертикальных видео
+                        li Съемки для ютуб, рутуб
+                        li Вирусное видео
+                        li Аэросъемка Бекстейдж
+                        li Все услуги
+                .main__service
+                    p Идея
+                    p Видео
+                    p Фото
+                    p Аудио
+                    p Текси
+                    p Печатная
+                +svg ("down-arrow")
+            .main__our-cases
+                h2 Наши кейсы
+                +svg ("arrow2")
+                //!-свипер
+                    +svg ("swiper-left-arrow")
+                    +svg ("swiper-right-arrow")-!
+                .main__name-works
+                    +picture({
+                        path: `${baseDir}assets/images/main/name-work`,
+                        ext: `png`,
+                    })
+                    .main__name-work
+                        h3 Название работы
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+

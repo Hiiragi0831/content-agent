@@ -1,2 +1,29 @@
 // FontName
 // @include font-face("FontName", 500);
+
+@include font-face("Gilroy", 100, normal);
+@include font-face("Gilroy", 100, italic);
+
+@include font-face("Gilroy", 200, normal);
+@include font-face("Gilroy", 200, italic);
+
+@include font-face("Gilroy", 300, normal);
+@include font-face("Gilroy", 300, italic);
+
+@include font-face("Gilroy", 400, normal);
+@include font-face("Gilroy", 400, italic);
+
+@include font-face("Gilroy", 500, normal);
+@include font-face("Gilroy", 500, italic);
+
+@include font-face("Gilroy", 600, normal);
+@include font-face("Gilroy", 600, italic);
+
+@include font-face("Gilroy", 700, normal);
+@include font-face("Gilroy", 700, italic);
+
+@include font-face("Gilroy", 800, normal);
+@include font-face("Gilroy", 800, italic);
+
+@include font-face("Gilroy", 900, normal);
+@include font-face("Gilroy", 900, italic);
