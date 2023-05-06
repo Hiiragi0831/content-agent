@@ -1,0 +1,82 @@
+.services {
+    .container {
+        margin: 0 auto;
+        width: vc(1170);
+    }
+    &__service {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: vc(95);
+
+        h2 {
+            font-style: normal;
+            font-weight: vc(700);
+            font-size: vc(48);
+            color: $color-white;
+            width: vc(266);
+            height: vc(116);
+            position: relative;
+        }
+
+        img {
+            width: vc(191);
+            height: vc(191);
+            position: absolute;
+            left: vc(200);
+            top: vc(-35);
+        }
+    }
+
+    &__list {
+        width: vc(324);
+        height: vc(294);
+        margin-top: vc(26);
+        margin-bottom: vc(35);
+
+        ul {
+            background: rgba(49, 35, 35, 0.9);
+            border: vc(3) solid #1D0B0B;
+            border-radius: vc(20);
+            padding: vc(25) vc(78) vc(15) vc(25);
+
+            li {
+                font-style: normal;
+                font-weight: vc(400);
+                font-size: vc(16);
+                color: $color-white;
+
+
+                &:not(:last-child) {
+                    line-height: vc(35);
+                }
+
+                &:last-child {
+                    margin-top: vc(25);
+                }
+
+                &:hover {
+                    text-decoration-line: underline;
+                    color: $color-orange;
+                    $transition-duration: 0.35s;
+                }
+            }
+        }
+
+        &_icon {
+            display: block;
+            margin: 0 vc(520);
+            width: vc(80);
+            height: vc(80);
+            border: vc(2) solid $color-orange;
+            border-radius: 100%;
+            position: absolute;
+
+            svg {
+                position: relative;
+                width: vc(76);
+                height: vc(48);
+                top: vc(15);
+            }
+        }
+    }
+}

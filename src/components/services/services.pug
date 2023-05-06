@@ -1,0 +1,28 @@
+mixin services()
+    .services
+        .container
+            .services__service
+                h2 Наши услуги
+                +picture({
+                    path: `${baseDir}assets/images/services/rightallepsarrow`,
+                    ext: `png`,
+                })
+            .services__list
+                ul
+                    li Съемки сторис
+                    li Съемки вертикальных видео
+                    li Съемки для ютуб, рутуб
+                    li Вирусное видео
+                    li Аэросъемка Бекстейдж
+                    li Все услуги
+                .services__list_icon
+                    +svg("down-arrow")
+            //.services__items
+                .services__item
+                    p Идея
+                    p Видео
+                    p Фото
+                    p Аудио
+                    p Текст
+                    p Печатная
+

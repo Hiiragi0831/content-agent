@@ -66,3 +66,8 @@
     hyphens: auto;
 }
 /* stylelint-enable */
+
+.bg-image {
+    background-image: url("@images/background.png");
+    background-size: vc(1920);
+}

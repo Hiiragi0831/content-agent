@@ -20,16 +20,5 @@ mixin header
                 a(href="#").header__social
                     +svg("rutube")
             .header__contacts
-                .header__contact
-                    .header__contact-icon
-                        +svg("email")
-                    .header__contact-info
-                        p E-mail
-                        a(href="#") example@gmail.com
-                .header__contact
-                    .header__contact-icon
-                        +svg("telephone")
-                    .header__contact-info
-                        p Телефон:
-                        a(href="#") +7(495) 331 33 67
-
+                +exposure("email", "E-mail", "example@gmail.com", "mailto:example@gmail.com")
+                +exposure("telephone", "Телефон:", "+7(495) 331 33 67", "#")
