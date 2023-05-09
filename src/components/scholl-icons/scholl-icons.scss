@@ -1,0 +1,60 @@
+.scholl {
+
+    &__icons {
+        display: flex;
+        flex-direction: column;
+        gap: vc(10);
+        width: vc(161);
+        height: vc(185);
+        align-items: center;
+
+        &_icon {
+            width: vc(127);
+            height: vc(127);
+            background: rgba(55, 39, 40, 0.6);
+            border: vc(2) solid $color-orange;
+            border-radius: 100%;
+            position: absolute;
+
+            svg {
+                position: relative;
+                width: vc(65);
+                height: vc(65);
+                top: vc(27);
+                left: vc(27);
+            }
+        }
+
+        h3 {
+            position: relative;
+            width: vc(36);
+            height: vc(36);
+            background: rgba(55, 39, 40, 1);
+            border: vc(1) dashed $color-orange;
+            border-radius: 100%;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 13px;
+            line-height: 16px;
+            text-align: center;
+            vertical-align: middle;
+            color: $color-orange;
+            padding-top: vc(9);
+            top: vc(0);
+            left: vc(40);
+        }
+
+        p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: vc(20);
+            line-height: vc(23);
+            text-align: center;
+            color: $color-white;
+            position: relative;
+            top: vc(90);
+            width: vc(161);
+            height: auto;
+        }
+    }
+}

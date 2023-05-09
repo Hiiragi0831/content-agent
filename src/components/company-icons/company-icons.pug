@@ -1,0 +1,8 @@
+mixin company-icons(icon, name)
+    .icons
+        .icons__img
+            +picture({
+                path: icon,
+                ext: `png`,
+            })(icon)
+        p.icons__p!= name

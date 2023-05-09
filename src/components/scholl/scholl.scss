@@ -1,0 +1,26 @@
+.scholl {
+
+    .container {
+        margin-top: vc(120);
+        width: vc(1170);
+        display: flex;
+    }
+
+    &__online {
+
+        h2 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: vc(48);
+            color: $color-white;
+            width: vc(185);
+            height: auto;
+            margin-right: vc(76);
+        }
+    }
+
+    &__service {
+        display: flex;
+        gap: vc(25);
+    }
+}

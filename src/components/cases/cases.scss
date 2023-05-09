@@ -11,12 +11,11 @@
 
         h2 {
             font-style: normal;
-            font-weight: vc(700);
+            font-weight: 700;
             font-size: vc(48);
             color: $color-white;
             width: vc(425);
             height: vc(58);
-            position: relative;
             margin-right: vc(78);
         }
 
@@ -29,53 +28,13 @@
         }
     }
 
-    &__swipper {
-        width: vc(266);
-        height: vc(162);
-        display: flex;
-        justify-content: space-between;
 
-        &_icon1 {
-            position: absolute;
-            width: vc(83);
-            height: vc(83);
-            background: rgba(55, 39, 40, 0.6);
-            border: vc(2) solid #F3C934;
-            border-radius: 100%;
-
-            svg {
-                position: relative;
-                width: vc(68);
-                height: vc(50);
-                top: vc(15);
-                left: vc(5);
-            }
-        }
-
-        &_icon2 {
-            position: absolute;
-            width: vc(83);
-            height: vc(83);
-            background: rgba(55, 39, 40, 0.6);
-            border: vc(2) solid #F3C934;
-            border-radius: 100%;
-
-            svg {
-                position: relative;
-                width: vc(68);
-                height: vc(50);
-                top: vc(15);
-                left: vc(5);
-            }
-        }
-    }
 
     &__works {
         display: flex;
         width: vc(632);
         height: auto;
         margin-top: vc(39);
-
         background: rgba(49, 35, 35, 0.6);
         border: vc(3) solid #1D0B0B;
         border-radius: vc(20);
@@ -97,7 +56,7 @@
 
             h3 {
                 font-style: normal;
-                font-weight: vc(700);
+                font-weight: 700;
                 font-size: vc(24);
                 line-height: vc(29);
                 color: $color-white;
@@ -105,12 +64,56 @@
 
             p {
                 font-style: normal;
-                font-weight: vc(400);
+                font-weight: 400;
                 font-size: vc(14);
                 line-height: vc(21);
                 color: $color-white;
                 padding-right: vc(27);
                 padding-bottom: vc(35);
+            }
+        }
+    }
+
+    &__swipper {
+        width: vc(266);
+        height: vc(162);
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        top: vc(210);
+        left: vc(195);
+
+        &_icon1 {
+            width: vc(83);
+            height: vc(83);
+            background: rgba(55, 39, 40, 0.6);
+            border: vc(2) solid #F3C934;
+            border-radius: 100%;
+            margin-right: vc(30);
+
+            svg {
+                position: relative;
+                width: vc(68);
+                height: vc(50);
+                top: vc(15);
+                left: vc(5);
+            }
+        }
+
+        &_icon2 {
+            width: vc(83);
+            height: vc(83);
+            background: rgba(55, 39, 40, 0.6);
+            border: vc(2) solid #F3C934;
+            border-radius: 100%;
+
+            svg {
+                position: relative;
+                width: vc(68);
+                height: vc(50);
+                top: vc(15);
+                left: vc(5);
             }
         }
     }

@@ -1,0 +1,30 @@
+.project {
+
+    .container {
+        margin-top: vc(120);
+        width: vc(1172);
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__our {
+        width: vc(696);
+        height: vc(58);
+
+        h2 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: vc(48);
+            color: $color-white;
+            width: vc(696);
+            height: auto;
+        }
+    }
+
+    &__projects {
+        display: flex;
+        justify-content: space-between;
+        margin-top: vc(40);
+    }
+}

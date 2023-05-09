@@ -1,0 +1,26 @@
+.button1 {
+    width: vc(180);
+    height: vc(50);
+    background: $color-orange;
+    border-radius: vc(90);
+    text-align: center;
+    padding-top: vc(11);
+
+    &__links {
+        font-style: normal;
+        font-weight: 500;
+        font-size: vc(16);
+        line-height: vc(19);
+        color: $color-black;
+    }
+}
+
+.button {
+    background: $color-orange;
+    border-radius: vc(90);
+    text-align: center;
+
+    &__primary {
+
+    }
+}
