@@ -1,9 +1,9 @@
-// .сompany-icons
-.icons {
+.company-icons{
     position: relative;
+    width: vc(365);
+    height: vc(261);
 
     &__img {
-        z-index: -1;
 
         &:after {
             content: '';
@@ -13,6 +13,18 @@
             top: 0;
             left: 0;
             background: linear-gradient(to top, #342E30 0%, transparent 40%);
+            border-radius: vc(10);
+        }
+
+        &:hover::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to top, #342E30 0%, transparent 80%);
+            border-radius: vc(10);
         }
 
         img {
@@ -23,15 +35,39 @@
         }
     }
 
-    &__p {
+    &__title {
         position: absolute;
-        max-width: vc(185);
-        bottom: vc(30);
+        width: vc(236);
+        height: vc(56);
+        left: vc(18);
+        top: 0;
+        background: #F3C934;
+        border-radius: 0 0 vc(10) vc(10);
+        overflow: hidden;
+
+        h3 {
+            font-weight: 700;
+            font-size: vc(24);
+            line-height: vc(29);
+            color: $color-black;
+            position: relative;
+            left: vc(15);
+            top: vc(13);
+
+        }
+    }
+
+    &__name {
+        position: relative;
         left: vc(25);
-        font-style: normal;
-        font-weight: 500;
-        font-size: vc(16);
-        line-height: vc(19);
-        color: $color-white;
+        top: vc(-50);
+
+        p {
+            max-width: vc(210);
+            font-weight: 500;
+            font-size: vc(16);
+            line-height: vc(19);
+            color: $color-white;
+        }
     }
 }

@@ -4,9 +4,6 @@
     .container {
         margin: 0 auto;
         width: vc(1172);
-        //display: flex;
-        //flex-direction: column;
-
     }
 
     &__about {
@@ -43,8 +40,10 @@
     &__items {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        gap: vc(38);
-        grid-template-areas: ". . .";
+        grid-template-rows: 1fr 1fr;
+        gap: 21px 37px;
+        grid-template-areas:
+        ". . ."
+        ". . .";
     }
 }
