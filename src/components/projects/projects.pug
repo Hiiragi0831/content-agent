@@ -5,6 +5,7 @@ mixin projects(icon, name, price)
                 path: icon,
                 ext: `png`,
             })(icon)
+        .projects__title
             h3!= name
         .projects__info
             +button1("Подробнее")

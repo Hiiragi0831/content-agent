@@ -5,4 +5,5 @@ mixin company-icons(icon, name)
                 path: icon,
                 ext: `png`,
             })(icon)
-        p.icons__p!= name
+        if name
+            p.icons__p!= name

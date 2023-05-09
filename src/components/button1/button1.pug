@@ -1,5 +1,4 @@
-mixin button1(button)
-    .button.button__primary
-            a.button1__links(href=link)!=button
+mixin button1(button, link)
+    a(href=link).button.button__primary!=button
     //.button.button__secondary
     //    a.button1__links(href=link)!=button

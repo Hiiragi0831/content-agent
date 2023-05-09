@@ -9,22 +9,21 @@
     }
 
     &__our {
-        width: vc(696);
-        height: vc(58);
 
         h2 {
             font-style: normal;
             font-weight: 700;
             font-size: vc(48);
             color: $color-white;
-            width: vc(696);
-            height: auto;
         }
     }
 
     &__projects {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0 vc(37);
+        grid-template-areas: ". . .";
         margin-top: vc(40);
     }
 }

@@ -1,9 +1,8 @@
+// .сompany-icons
 .icons {
-    width: vc(365);
-    height: vc(261);
+    position: relative;
 
     &__img {
-        position: relative;
         z-index: -1;
 
         &:after {
@@ -16,7 +15,6 @@
             background: linear-gradient(to top, #342E30 0%, transparent 40%);
         }
 
-
         img {
             width: 100%;
             height: auto;
@@ -26,11 +24,10 @@
     }
 
     &__p {
-        position: relative;
-        width: vc(210);
-        height: auto;
-        top: vc(-60);
-        left: vc(15);
+        position: absolute;
+        max-width: vc(185);
+        bottom: vc(30);
+        left: vc(25);
         font-style: normal;
         font-weight: 500;
         font-size: vc(16);

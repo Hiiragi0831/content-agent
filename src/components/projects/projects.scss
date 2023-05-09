@@ -1,34 +1,31 @@
 .projects {
+    display: flex;
+    flex-direction: column;
 
     &__img {
         width: vc(365);
         height: vc(261);
         border-radius: vc(10);
-
-        h3 {
-            width: vc(212);
-            height: auto;
-            font-style: normal;
-            font-weight: 500;
-            font-size: vc(24);
-            line-height: vc(28);
-            color: $color-white;
-            margin-top: vc(20);
-            margin-bottom: vc(15);
-        }
     }
 
+    &__title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: vc(24);
+        line-height: vc(28);
+        color: $color-white;
+        margin-top: vc(20);
+        margin-bottom: vc(15);
+    }
 
     &__info {
         display: flex;
         gap: vc(20);
         align-items: center;
-        margin-top: vc(63);
 
         p {
             width: vc(78);
             height: vc(28);
-            font-style: normal;
             font-weight: 500;
             font-size: vc(24);
             line-height: vc(28);
