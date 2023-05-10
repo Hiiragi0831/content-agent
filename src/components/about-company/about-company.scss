@@ -1,4 +1,4 @@
-.company {
+.about-company {
     margin-top: vc(120);
 
     .container {
@@ -13,11 +13,9 @@
         height: vc(116);
 
         h2 {
-            font-style: normal;
             font-weight: 700;
             font-size: vc(48);
             color: $color-white;
-            width: vc(230);
             margin-right: vc(96);
         }
 
@@ -41,7 +39,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 21px 37px;
+        gap: 21px 25px;
         grid-template-areas:
         ". . ."
         ". . .";

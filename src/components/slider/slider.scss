@@ -1,0 +1,59 @@
+.slider {
+    margin-top: vc(40);
+
+    &__logos {
+        height: vc(116);
+        margin-bottom: vc(41);
+        display: flex;
+
+
+        &_logo {
+            width: vc(272);
+            height: vc(116);
+            background: rgba(49, 35, 35, 0.6);
+            border: vc(3) solid #1D0B0B;
+            border-radius: vc(20);
+            position: absolute;
+            filter: grayscale(100%);
+
+            &:hover {
+                filter: grayscale(0);
+                transition-duration: 0.35s;
+            }
+
+            p {
+                position: relative;
+                font-weight: 400;
+                font-size: vc(40);
+                line-height: vc(46);
+                top: vc(35);
+                left: vc(77);
+                color: #919191;
+
+                &:hover {
+                    transition-duration: 0.35s;
+                    color: $color-orange;
+                }
+            }
+        }
+    }
+
+    &__markers {
+        display: flex;
+        justify-content: center;
+        gap: vc(22);
+        margin-bottom: vc(95);
+
+        &_marker {
+            width: vc(22);
+            height: vc(22);
+            border-radius: 100%;
+            background-color: $color-white;
+
+            &:hover {
+                transition-duration: 0.35s;
+                background-color: $color-orange;
+            }
+        }
+    }
+}

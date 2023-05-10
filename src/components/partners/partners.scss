@@ -1,0 +1,17 @@
+.partners {
+    margin-top: vc(100);
+
+    .container {
+        margin: 0 auto;
+        width: vc(1172);
+    }
+
+    &__title {
+
+        h2 {
+            font-weight: 700;
+            font-size: vc(48);
+            color: $color-white;
+        }
+    }
+}
