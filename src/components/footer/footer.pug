@@ -1,0 +1,25 @@
+mixin footer()
+    .footer
+        .container
+            .footer__info
+                .footer__info_logo
+                    +picture({
+                        path: `${baseDir}assets/images/header/logo`,
+                        ext: `png`,
+                    })
+                .footer__info_sections
+                    h3 Разделы
+                    .footer__info_sections-section
+                        p Идея
+                        p Аудио
+                        p Видео
+                        p Текст
+                        p Фото
+                        p Печатня
+                .footer__info_contacts
+                    h3 Контакты
+                    .footer__info_contacts-contact
+                        +exposure("email", "E-mail", "example@gmail.com", "mailto:example@gmail.com")
+                        +exposure("telephone", "Телефон:", "+7(495) 331 33 67", "#")
+            .footer__copyrite
+                p Все права защищены. 2022

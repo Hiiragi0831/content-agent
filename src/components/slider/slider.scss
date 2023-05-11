@@ -2,9 +2,10 @@
     margin-top: vc(40);
 
     &__logos {
-        height: vc(116);
         margin-bottom: vc(41);
         display: flex;
+        justify-content: space-between;
+        align-items: center;
 
 
         &_logo {
@@ -13,13 +14,8 @@
             background: rgba(49, 35, 35, 0.6);
             border: vc(3) solid #1D0B0B;
             border-radius: vc(20);
-            position: absolute;
             filter: grayscale(100%);
-
-            &:hover {
-                filter: grayscale(0);
-                transition-duration: 0.35s;
-            }
+            transition: $transition;
 
             p {
                 position: relative;
@@ -29,9 +25,13 @@
                 top: vc(35);
                 left: vc(77);
                 color: #919191;
+                transition: $transition;
+            }
 
-                &:hover {
-                    transition-duration: 0.35s;
+            &:hover {
+                filter: grayscale(0);
+
+                p {
                     color: $color-orange;
                 }
             }
