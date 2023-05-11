@@ -1,0 +1,27 @@
+mixin filming()
+    .filming
+        .container
+            .filming__info
+                .filming__info_title
+                    h2 Съемки для ютуб, рутуб
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                .filming__info_img
+                    +picture({
+                        path: `${baseDir}assets/images/filming/filming`,
+                        ext: `png`,
+                    })
+            .filming__cases
+                +cases()
+            .filming__advantages
+                h2 Наши преимущества
+                .filming__advantages_icons
+                    +scholl-icons("director", "01", "Какое то преимущество")
+                    +scholl-icons("shared-vision", "03", "Какое то преимущество")
+                    +scholl-icons("reels", "04", "Какое то преимущество")
+                    +scholl-icons("reading-book", "05", "Какое то преимущество")
+            .filming__stages
+                h2 Этапы работы
+                .filming__stages_stage
+                    +stages("Most important step. We make sure your scope is fully identified.","Scoping")
+
+
