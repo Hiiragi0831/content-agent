@@ -5,6 +5,7 @@ mixin company-icons(icon, title, name)
                 path: icon,
                 ext: `png`,
             })(icon)
+            if title
         .company-icons__title
             h3!=title
         .company-icons__name

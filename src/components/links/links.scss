@@ -1,0 +1,52 @@
+.links {
+
+    .container {
+        margin: 0 auto;
+        width: vc(1170);
+    }
+
+    &__link {
+        display: flex;
+        gap: vc(14);
+        align-items: center;
+        margin-top: vc(53);
+
+        &_main {
+
+            a {
+                font-weight: 400;
+                font-size: vc(16);
+                line-height: vc(19);
+                text-decoration-line: underline;
+                color: $color-orange;
+
+                &:hover {
+                    text-decoration-line: none;
+                    transition: $transition;
+                }
+
+            }
+        }
+
+        &_svg {
+            width: vc(16);
+            height: vc(12);
+        }
+
+
+        &_crumbs {
+
+            a {
+                font-weight: 400;
+                font-size: vc(16);
+                line-height: vc(19);
+                color: $color-white;
+
+                &:hover {
+                    text-decoration-line: underline;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+}
