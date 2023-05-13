@@ -1,0 +1,138 @@
+.home-video {
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: vc(48);
+    }
+
+    &__img {
+
+        &_main {
+            width: vc(615);
+            height: vc(406);
+            margin-bottom: vc(21);
+
+            img {
+                background: #312323;
+                border: 3px solid #1D0B0B;
+                border-radius: 20px;
+            }
+        }
+
+        &_secondary {
+            display: flex;
+            gap: vc(14);
+
+            img {
+                width: vc(159);
+                height: vc(105);
+                background: #312323;
+                border: 3px solid #1D0B0B;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    &__title {
+
+        h2 {
+            font-weight: 700;
+            font-size: vc(48);
+            line-height: vc(58);
+            color: $color-white;
+            margin-bottom: vc(20);
+        }
+
+        &_abilities {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: vc(20);
+
+            &-price {
+                display: flex;
+                flex-direction: column;
+                gap: vc(5);
+
+                p {
+                    font-weight: 500;
+                    font-size: vc(20);
+                    line-height: vc(24);
+                    color: $color-white;
+                }
+
+                h3 {
+                    font-weight: 700;
+                    font-size: vc(32);
+                    line-height: vc(39);
+                    color: $color-orange;
+                }
+            }
+
+            &-data {
+                display: flex;
+                flex-direction: column;
+                gap: vc(5);
+
+                p {
+                    font-weight: 500;
+                    font-size: vc(20);
+                    line-height: vc(24);
+                    color: $color-white;
+                }
+
+                h3 {
+                    font-weight: 700;
+                    font-size: vc(32);
+                    line-height: vc(39);
+                    color: $color-orange;
+                }
+            }
+        }
+
+        &_description {
+            width: vc(515);
+            height: vc(189);
+            border-top: 1px solid #C1C1C1;
+            border-bottom: 1px solid #C1C1C1;
+            margin-bottom: vc(20);
+
+            h3 {
+                font-weight: 500;
+                font-size: vc(20);
+                line-height: vc(24);
+                color: $color-white;
+                margin-bottom: vc(10);
+                margin-top: vc(20);
+            }
+
+            p {
+                font-weight: 400;
+                font-size: vc(13);
+                line-height: 149%;
+                color: $color-white;
+            }
+        }
+
+        &_payment {
+
+            &-way {
+                display: flex;
+                flex-direction: column;
+                gap: vc(10);
+
+                p {
+                    font-weight: 500;
+                    font-size: vc(20);
+                    line-height: vc(24);
+                    color: $color-white;
+                }
+
+                img {
+                    width: vc(156);
+                    height: vc(28);
+                }
+            }
+        }
+    }
+}

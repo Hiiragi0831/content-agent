@@ -38,18 +38,20 @@
         border-radius: vc(20);
         padding-left: vc(20);
         padding-top: vc(20);
+        width: vc(632);
+        height: vc(290);
 
         img {
-            width: vc(274);
-            height: vc(193);
+            width: vc(191);
+            height: vc(182);
         }
 
         &_work {
             display: flex;
             flex-direction: column;
             margin-left: vc(21);
-            width: vc(369);
-            height: auto;
+            //width: vc(369);
+            //height: auto;
             gap: vc(11);
 
             h3 {

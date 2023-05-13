@@ -1,10 +1,6 @@
 .footer {
     background: #251A1A;
-
-    .container {
-        margin: 0 auto;
-        width: vc(1170);
-    }
+    z-index: 2;
 
     &__info {
         display: flex;
@@ -78,7 +74,7 @@
     }
 
 
-
+    //copyright
     &__copyrite {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         margin-top: vc(40);

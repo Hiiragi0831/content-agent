@@ -1,0 +1,44 @@
+.text-blok {
+    margin-top: vc(110);
+    margin-bottom: vc(128);
+
+    .container {
+        display: flex;
+        gap: vc(57);
+
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: vc(30);
+
+        h2 {
+            font-weight: 700;
+            font-size: vc(48);
+            line-height: vc(58);
+            color: $color-white;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: vc(16);
+            line-height: 149%;
+            color: $color-white;
+
+        }
+    }
+
+    &__img {
+        flex-shrink: 0;
+        width: vc(607);
+        height: vc(612);
+
+
+        img {
+            background: #312323;
+            border: 3px solid #1D0B0B;
+            border-radius: 20px;
+        }
+    }
+}

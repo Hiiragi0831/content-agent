@@ -1,0 +1,25 @@
+.advantages {
+    margin-top: vc(122);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+
+        h2 {
+            font-weight: 700;
+            font-size: vc(48);
+            line-height: vc(58);
+            color: $color-white;
+            max-width: vc(335);
+        }
+    }
+
+    &__icons {
+        display: flex;
+        gap: vc(40);
+        margin-left: vc(80);
+    }
+}

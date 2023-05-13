@@ -1,8 +1,11 @@
 .services {
+    margin-bottom: vc(34);
+
     .container {
         margin: 0 auto;
         width: vc(1170);
     }
+
     &__service {
         display: flex;
         justify-content: flex-start;
@@ -63,13 +66,14 @@
         }
 
         &_icon {
-            display: block;
-            margin: 0 vc(520);
+            //display: block;
             width: vc(80);
             height: vc(80);
             border: vc(2) solid $color-orange;
             border-radius: 100%;
             position: absolute;
+            //margin-bottom: vc(75);
+            left: vc(550);
 
             svg {
                 position: relative;

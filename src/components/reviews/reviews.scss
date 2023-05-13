@@ -1,0 +1,24 @@
+.reviews {
+    margin-bottom: vc(110);
+    margin-top: vc(100);
+
+    .container {
+    }
+
+    &__title {
+        margin-bottom: vc(30);
+
+        h2 {
+            font-weight: 700;
+            font-size: vc(48);
+            line-height: vc(58);
+            color: $color-white;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
