@@ -1,0 +1,39 @@
+.page-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: vc(40);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        gap: vc(50);
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: vc(30);
+        max-width: vc(375);
+
+        h2 {
+            font-weight: 700;
+            font-size: vc(48);
+            line-height: vc(58);
+            color: $color-white;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: vc(16);
+            line-height: 149%;
+            color: $color-white;
+
+        }
+    }
+
+    &__img {
+        flex-shrink: 0;
+        width: vc(747);
+        height: vc(493);
+    }
+}

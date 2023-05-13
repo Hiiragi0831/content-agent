@@ -10,6 +10,9 @@
 @import "base";
 @import "helpers";
 
+@import "pages/catalog";
+@import "pages/category-page";
+
 @import "@components/category/category";
 @import "@components/header/header";
 @import "@components/services/services";
@@ -27,5 +30,6 @@
 @import "@components/footer/footer";
 @import "@components/links/links";
 @import "@components/names-category/names-category";
-@import "@components/filming/filming";
-@import "@components/stages/stages";
+@import "@components/page-info/page-info";
+@import "@components/advantages/advantages";
+@import "@components/beginning/beginning";
