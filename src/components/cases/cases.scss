@@ -1,9 +1,8 @@
 .cases{
 
     .container {
-        margin-top: vc(75);
         display: flex;
-        align-items: flex-start;
+        justify-content: space-between;
     }
 
     &__case {
@@ -27,48 +26,6 @@
         }
     }
 
-    &__works {
-        display: flex;
-        margin-top: vc(39);
-        background: rgba(49, 35, 35, 0.6);
-        border: vc(3) solid #1D0B0B;
-        border-radius: vc(20);
-        padding-left: vc(20);
-        padding-top: vc(20);
-        width: vc(632);
-        height: vc(290);
-
-        img {
-            width: vc(191);
-            height: vc(182);
-        }
-
-        &_work {
-            display: flex;
-            flex-direction: column;
-            margin-left: vc(21);
-            gap: vc(11);
-
-            h3 {
-                font-style: normal;
-                font-weight: 700;
-                font-size: vc(24);
-                line-height: vc(29);
-                color: $color-white;
-            }
-
-            p {
-                font-style: normal;
-                font-weight: 400;
-                font-size: vc(14);
-                line-height: vc(21);
-                color: $color-white;
-                padding-right: vc(27);
-                padding-bottom: vc(35);
-            }
-        }
-    }
-
     &__swipper {
         width: vc(266);
         height: vc(162);
@@ -76,8 +33,8 @@
         position: absolute;
         align-items: center;
         justify-content: center;
-        top: vc(210);
-        left: vc(195);
+        top: vc(125);
+        left: vc(220);
 
         &_icon1 {
             width: vc(83);
@@ -109,6 +66,46 @@
                 height: vc(50);
                 top: vc(15);
                 left: vc(5);
+            }
+        }
+    }
+
+    &__works {
+        display: flex;
+        background: rgba(49, 35, 35, 0.6);
+        border: vc(3) solid #1D0B0B;
+        border-radius: vc(20);
+        padding-left: vc(20);
+        padding-top: vc(20);
+        width: vc(632);
+
+        img {
+            width: vc(191);
+            height: vc(182);
+        }
+
+        &_work {
+            display: flex;
+            flex-direction: column;
+            margin-left: vc(21);
+            gap: vc(11);
+
+            h3 {
+                font-style: normal;
+                font-weight: 700;
+                font-size: vc(24);
+                line-height: vc(29);
+                color: $color-white;
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: vc(14);
+                line-height: vc(21);
+                color: $color-white;
+                padding-right: vc(27);
+                padding-bottom: vc(35);
             }
         }
     }

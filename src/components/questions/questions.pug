@@ -9,15 +9,15 @@ mixin questions()
                 .questions__feelds_namber
                     input(tupe="tel" placeholder="Номер телефона")
                 .questions__feelds_send
-                    +button("Отправить")
+                    +button("Отправить", "#")
             .questions__social
-                a(href="#").questions__social_pfone
-                +svg("pfone")
-                p или позвоните нам по номеру +7(495) 331 33 67
-            .questions__social_watsup
-                a(href="#").questions__social_watsup
-                +svg("whatsapp")
-                p Мы в WhatsApp
+                .questions__social_pfone
+                    +svg("pfone")
+                    p или позвоните нам по номеру
+                    a(href="#") +7(495) 331 33 67
+                .questions__social_watsup
+                    +svg("whatsapp")
+                    a(href="#") Мы в WhatsApp
 
 
 

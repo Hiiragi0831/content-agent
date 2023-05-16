@@ -16,10 +16,10 @@
                 line-height: vc(19);
                 text-decoration-line: underline;
                 color: $color-orange;
+                transition: $transition;
 
                 &:hover {
                     text-decoration-line: none;
-                    transition: $transition;
                 }
 
             }
@@ -38,10 +38,10 @@
                 font-size: vc(16);
                 line-height: vc(19);
                 color: $color-white;
+                transition: $transition;
 
                 &:hover {
                     text-decoration-line: underline;
-                    transition: $transition;
                 }
             }
         }

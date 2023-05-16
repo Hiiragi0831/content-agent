@@ -1,7 +1,8 @@
 .services {
-    margin-bottom: vc(34);
 
-    .container {}
+    .container {
+        margin-bottom: vc(85);
+    }
 
     &__service {
         display: flex;
@@ -31,7 +32,6 @@
         width: vc(324);
         height: vc(294);
         margin-top: vc(26);
-        margin-bottom: vc(35);
 
         ul {
             background: rgba(49, 35, 35, 0.9);
@@ -61,21 +61,21 @@
                 }
             }
         }
+    }
 
-        &_icon {
-            width: vc(80);
-            height: vc(80);
-            border: vc(2) solid $color-orange;
-            border-radius: 100%;
-            position: absolute;
-            left: vc(550);
+    &__icon {
+        width: vc(80);
+        height: vc(80);
+        border: vc(2) solid $color-orange;
+        border-radius: 100%;
+        position: relative;
+        left: vc(550);
 
-            svg {
-                position: relative;
-                width: vc(76);
-                height: vc(48);
-                top: vc(15);
-            }
+        svg {
+            position: relative;
+            width: vc(76);
+            height: vc(48);
+            top: vc(15);
         }
     }
 }

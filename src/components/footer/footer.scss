@@ -48,10 +48,10 @@
                     line-height: vc(23);
                     color: $color-white;
                     opacity: 0.6;
+                    transition: $transition;
 
                     &:hover {
                         opacity: 1;
-                        transition: $transition;
                     }
                 }
             }

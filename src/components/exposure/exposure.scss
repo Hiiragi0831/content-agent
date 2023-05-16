@@ -23,9 +23,6 @@
     &__info {
         display: flex;
         flex-direction: column;
-        width: vc(171);
-        height: auto;
-        padding: 0;
         margin-left: vc(50);
 
         p {
@@ -39,7 +36,7 @@
             font-weight: (500);
             font-size: vc(18);
             color: #FFFFFF;
-            transition: text-shadow $transition;
+            transition: $transition;
 
             &:hover {
                 text-shadow: black vc(2) vc(2);

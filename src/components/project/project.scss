@@ -1,13 +1,14 @@
 .project {
+    margin-top: vc(120);
 
     .container {
-        margin-top: vc(120);
         display: flex;
         flex-direction: column;
 
     }
 
     &__our {
+        margin-bottom: vc(40);
 
         h2 {
             font-style: normal;
@@ -23,6 +24,5 @@
         grid-template-rows: 1fr;
         gap: 0 vc(37);
         grid-template-areas: ". . .";
-        margin-top: vc(40);
     }
 }
