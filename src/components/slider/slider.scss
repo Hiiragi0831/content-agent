@@ -1,6 +1,8 @@
 .slider {
     margin-top: vc(40);
 
+    .container {}
+
     &__logos {
         margin-bottom: vc(41);
         display: flex;
@@ -49,9 +51,9 @@
             height: vc(22);
             border-radius: 100%;
             background-color: $color-white;
+            transition: $transition;
 
             &:hover {
-                transition-duration: 0.35s;
                 background-color: $color-orange;
             }
         }

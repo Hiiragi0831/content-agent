@@ -1,8 +1,9 @@
 mixin exposure(icon, title, info, link)
     .exposure
-        .exposure__icon
-            +svg(icon)
-        .exposure__info
-            p!= title
-            a(href=link)!= info
+        .container
+            .exposure__icon
+                +svg(icon)
+            .exposure__info
+                p!= title
+                a(href=link)!= info
 

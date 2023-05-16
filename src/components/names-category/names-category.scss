@@ -1,9 +1,6 @@
 .names-category {
 
-    .container {
-        margin: 0 auto;
-        width: vc(1170);
-    }
+    .container {}
 
     &__title {
         margin-top: vc(20);
@@ -23,10 +20,10 @@
         grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: 21px 25px;
         grid-template-areas:
-            ". . ."
-            ". . ."
-            ". . ."
-            ". . .";
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . .";
         margin-bottom: vc(100);
     }
 }

@@ -1,8 +1,6 @@
 .review {
 
-    .container {
-
-    }
+    .container {}
 
     &__infos {
         width: vc(375);
@@ -10,7 +8,6 @@
         background: #1E1516;
         box-shadow: 0 0 vc(14) rgba(0, 0, 0, 0.15);
         border-radius: vc(10);
-        //position: absolute;
 
         &_img1 {
             position: absolute;
@@ -46,7 +43,6 @@
 
                 &::before {
                     content: '';
-                    //border: vc(1) solid #29AAE3;
                     width: vc(10);
                     height: vc(1);
                     background-color: #29AAE3;
@@ -57,7 +53,6 @@
 
                 &::after {
                     content: '';
-                    //border: vc(1) solid #29AAE3;
                     width: vc(10);
                     height: vc(1);
                     background-color: #29AAE3;

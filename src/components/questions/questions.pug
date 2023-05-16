@@ -1,0 +1,24 @@
+mixin questions()
+    .questions
+        .container
+            .questions__title
+                h2 Остались вопросы? Оставьте данные и мы перезвоним
+            .questions__feelds
+                .questions__feelds_name
+                    input(tupe="text" placeholder="Ваше имя")
+                .questions__feelds_namber
+                    input(tupe="tel" placeholder="Номер телефона")
+                .questions__feelds_send
+                    +button("Отправить")
+            .questions__social
+                a(href="#").questions__social_pfone
+                +svg("pfone")
+                p или позвоните нам по номеру +7(495) 331 33 67
+            .questions__social_watsup
+                a(href="#").questions__social_watsup
+                +svg("whatsapp")
+                p Мы в WhatsApp
+
+
+
+

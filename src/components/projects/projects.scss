@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
 
+    .container {}
+
     &__img {
         width: vc(365);
         height: vc(261);

@@ -115,6 +115,9 @@
         }
 
         &_payment {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
             &-way {
                 display: flex;
@@ -131,6 +134,14 @@
                 img {
                     width: vc(156);
                     height: vc(28);
+                }
+            }
+
+            &-order {
+                a {
+                    font-weight: 600;
+                    font-size: vc(16);
+                    line-height: vc(19);
                 }
             }
         }

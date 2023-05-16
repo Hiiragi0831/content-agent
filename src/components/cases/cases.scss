@@ -2,7 +2,6 @@
 
     .container {
         margin-top: vc(75);
-        width: vc(1170);
         display: flex;
         align-items: flex-start;
     }
@@ -28,8 +27,6 @@
         }
     }
 
-
-
     &__works {
         display: flex;
         margin-top: vc(39);
@@ -50,8 +47,6 @@
             display: flex;
             flex-direction: column;
             margin-left: vc(21);
-            //width: vc(369);
-            //height: auto;
             gap: vc(11);
 
             h3 {

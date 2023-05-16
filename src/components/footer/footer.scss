@@ -1,6 +1,9 @@
 .footer {
     background: #251A1A;
     z-index: 2;
+    position: relative;
+
+    .container {}
 
     &__info {
         display: flex;
@@ -30,6 +33,7 @@
                 line-height: vc(29);
                 color: $color-white;
             }
+
             &-section {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
@@ -73,9 +77,7 @@
         }
     }
 
-
-    //copyright
-    &__copyrite {
+    &__copyright {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         margin-top: vc(40);
 

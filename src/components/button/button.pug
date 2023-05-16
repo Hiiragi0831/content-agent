@@ -1,2 +1,5 @@
 mixin button(button, link)
-    a(href=link).button.button__primary!=button
+    if link
+        a(href=link).button.button__primary!= button
+    else
+        button.button.button__primary!= button

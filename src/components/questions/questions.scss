@@ -1,0 +1,81 @@
+.questions {
+
+    .container {
+        margin-top: vc(100);
+        background: rgba(49, 35, 35, 0.6);
+        border: vc(3) solid #1D0B0B;
+        border-radius: vc(20);
+    }
+
+    &__title {
+
+        h2 {
+            font-weight: 500;
+            font-size: vc(36);
+            line-height: vc(42);
+            text-align: center;
+            color: $color-white;
+        }
+    }
+
+    &__feelds {
+        margin-top: vc(32);
+        justify-content: center;
+        gap: vc(20);
+        display: flex;
+
+        &_name {
+
+            input {
+                width: vc(265);
+                height: vc(50);
+                background: $color-white;
+                border-radius: vc(90);
+
+                &::placeholder {
+                    font-weight: 400;
+                    font-size: vc(14);
+                    line-height: vc(16);
+                    color: #09091C;
+                    text-align: center;
+                }
+            }
+        }
+
+        &_namber {
+
+            input {
+                width: vc(265);
+                height: vc(50);
+                background: $color-white;
+                border-radius: vc(90);
+
+                &::placeholder {
+                    font-weight: 400;
+                    font-size: vc(14);
+                    line-height: vc(16);
+                    color: #09091C;
+                    text-align: center;
+                }
+            }
+        }
+
+        &_send {
+
+            .button {
+
+                border-radius: vc(90);
+                font-weight: 700;
+                font-size: vc(16);
+                //line-height: vc(19);
+                text-align: center;
+                padding: vc(15) vc(91) vc(16) vc(91);
+
+                &__primary {
+                    background: $color-orange;
+                    color: $color-black;
+                }
+            }
+        }
+    }
+}

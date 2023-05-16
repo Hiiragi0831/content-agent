@@ -37,8 +37,8 @@
 
         img {
             background: #312323;
-            border: 3px solid #1D0B0B;
-            border-radius: 20px;
+            border: vc(3) solid #1D0B0B;
+            border-radius: vc(20);
         }
     }
 }
