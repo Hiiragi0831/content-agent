@@ -6,25 +6,37 @@
         margin-top: vc(20);
         margin-bottom: vc(40);
 
+        @include devices {
+            margin-bottom: vc(20);
+        }
+
         h2 {
-            font-weight: 700;
-            font-size: vc(48);
-            line-height: vc(58);
-            color: $color-white;
+            @include devices {
+                width: 100%;
+            }
         }
     }
 
     &__items {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: vc(25) vc(37);
-        grid-template-areas:
-        ". . ."
-        ". . ."
-        ". . ."
-        ". . .";
+        grid-template-areas: ". . .";
         margin-bottom: vc(100);
+
+        @include devices {
+            grid-template-columns: 1fr 1fr;
+            gap: vc(20) vc(20);
+            grid-template-areas:". .";
+            margin-bottom: vc(40);
+
+            p {
+                font-weight: 600;
+                font-size: vc(14);
+                line-height: vc(17);
+                color: $color-white;
+            }
+        }
     }
 }
 

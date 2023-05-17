@@ -8,5 +8,6 @@ mixin company-icons(icon, title, name)
             if title
                 .company-icons__title
                     h3!=title
-        .company-icons__name.for-desktop
+            else
+        .company-icons__name
             p!= name
