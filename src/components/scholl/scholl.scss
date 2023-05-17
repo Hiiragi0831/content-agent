@@ -5,7 +5,6 @@
         margin-top: vc(30);
     }
 
-
     .container {
         display: flex;
 
@@ -15,8 +14,7 @@
     }
 
     &__online {
-
-        h2 {
+        .h2 {
             margin-right: vc(76);
 
             @include devices {
@@ -37,7 +35,6 @@
     }
 
     @include devices {
-
         &__services {
 
             &_service1 {

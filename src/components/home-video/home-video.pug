@@ -2,6 +2,7 @@ mixin home-video()
     .home-video
         .container
             .home-video__img
+                h2.h2.for-devices Семейные видео
                 .home-video__img_main
                     +picture({
                         path: `${baseDir}assets/images/famyli-videos/famyli-videos`,
@@ -21,7 +22,7 @@ mixin home-video()
                         ext: `png`,
                     })
             .home-video__title
-                h2 Семейные видео
+                h2.h2.for-desktop Семейные видео
                 .home-video__title_abilities
                     .home-video__title_abilities-price
                         p Стоимость услуги:

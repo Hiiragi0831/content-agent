@@ -2,6 +2,11 @@
     margin-top: vc(110);
     margin-bottom: vc(128);
 
+    @include devices {
+        margin-top: vc(50);
+        margin-bottom: vc(40);
+    }
+
     .container {
         display: flex;
         flex-direction: column;
@@ -19,7 +24,7 @@
             gap: vc(55);
             max-width: vc(507);
 
-            h2 {
+            .h2 {
                 font-weight: 700;
                 font-size: vc(48);
                 line-height: vc(58);
@@ -31,14 +36,12 @@
                 font-size: vc(16);
                 line-height: 149%;
                 color: $color-white;
-
             }
         }
 
         &_img {
             width: vc(607);
             height: vc(412);
-
 
             img {
                 background: #312323;
@@ -80,7 +83,34 @@
                 line-height: 149%;
                 color: $color-white;
                 max-width: vc(507);
+            }
+        }
+    }
 
+    @include devices {
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: vc(20);
+
+            .h2 {
+                width: 100%;
+            }
+
+            img {
+                width: vc(360);
+                height: vc(289);
+                background: #312323;
+                border: vc(3) solid #1D0B0B;
+                border-radius: vc(20);
+                object-fit: cover;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: vc(13);
+                line-height: 149%;
+                color: $color-white;
             }
         }
     }

@@ -3,10 +3,7 @@
     .container {
         display: flex;
         flex-direction: column;
-
-        @include devices {
-            padding: 0;
-        }
+        padding: 0;
     }
 
     &__img {

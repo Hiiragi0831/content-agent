@@ -8,8 +8,7 @@
     .container {}
 
     &__title {
-
-        h2 {
+        .h2 {
             @include devices {
                 width: 100%;
             }

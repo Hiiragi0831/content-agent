@@ -2,10 +2,19 @@
     margin-top: vc(70);
     margin-bottom: vc(100);
 
+    @include devices {
+        margin-top: vc(40);
+        margin-bottom: vc(40);
+    }
+
     .container {
         display: flex;
         flex-direction: column;
         gap: vc(30);
+
+        @include devices {
+            gap: vc(28)
+        }
     }
 
     p {
@@ -13,5 +22,9 @@
         font-size: vc(16);
         line-height: 149%;
         color: $color-white;
+
+        @include devices {
+            font-size: vc(13);
+        }
     }
 }

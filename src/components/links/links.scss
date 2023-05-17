@@ -1,5 +1,4 @@
 .links {
-
     .container {}
 
     &__link {
@@ -9,7 +8,6 @@
         margin-top: vc(53);
 
         &_main {
-
             a {
                 font-weight: 400;
                 font-size: vc(16);
@@ -21,7 +19,6 @@
                 &:hover {
                     text-decoration-line: none;
                 }
-
             }
         }
 
@@ -30,9 +27,7 @@
             height: vc(12);
         }
 
-
         &_crumbs {
-
             a {
                 font-weight: 400;
                 font-size: vc(16);

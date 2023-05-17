@@ -2,7 +2,7 @@ mixin questions()
     .questions
         .container
             .questions__title
-                h2 Остались вопросы? Оставьте данные и мы перезвоним
+                h2.h2 Остались вопросы? Оставьте данные и мы перезвоним
             .questions__feelds
                 .questions__feelds_name
                     input(tupe="text" placeholder="Ваше имя")
@@ -13,8 +13,9 @@ mixin questions()
             .questions__social
                 .questions__social_pfone
                     +svg("pfone")
-                    p или позвоните нам по номеру
-                    a(href="#") +7(495) 331 33 67
+                    p.for-desktop или позвоните нам по номеру
+                    a(href="#").for-desktop +7(495) 331 33 67
+                    p.for-devices или позвоните нам по номеру +7(495) 331 33 67
                 .questions__social_watsup
                     +svg("whatsapp")
                     a(href="#") Мы в WhatsApp

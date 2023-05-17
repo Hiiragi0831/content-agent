@@ -11,17 +11,21 @@
             top: vc(15);
             left: vc(160);
 
-            img {
-                width: vc(55);
-                height: vc(38);
+            @include devices {
+                left: vc(145);
             }
         }
 
         &_svg2 {
             position: absolute;
-            top: vc(126);
-            left: vc(39);
+            top: vc(127);
+            left: vc(0);
             z-index: -1;
+
+            @include devices {
+                top: vc(180);
+                left: vc(25);
+            }
 
             svg {
                 fill: #1E1516;
@@ -38,6 +42,9 @@
                 text-align: center;
                 color: $color-white;
 
+                @include devices {
+
+                }
             }
 
             h3 {
@@ -47,6 +54,7 @@
                 text-align: center;
                 color: $color-white;
                 padding-top: vc(19);
+                padding-bottom: vc(54);
 
                 &::before {
                     content: '';
@@ -56,6 +64,11 @@
                     position: absolute;
                     top: vc(175);
                     left: vc(110);
+
+                    @include devices {
+                        left: vc(95);
+                        top: vc(193);
+                    }
                 }
 
                 &::after {
@@ -66,18 +79,22 @@
                     position: absolute;
                     top: vc(175);
                     left: vc(253);
+
+                    @include devices {
+                        top: vc(193);
+                    }
                 }
             }
         }
 
         &_img2 {
             position: absolute;
-            top: vc(202);
-            left: vc(163);
+            top: vc(230);
+            left: vc(158);
 
-            img {
-                width: vc(60);
-                height: vc(60);
+            @include devices {
+                top: vc(250);
+                left: vc(145);
             }
         }
     }

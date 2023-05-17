@@ -5,17 +5,30 @@
         background: rgba(49, 35, 35, 0.6);
         border: vc(3) solid #1D0B0B;
         border-radius: vc(20);
+
+        @include devices {
+            margin-top: vc(40);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: vc(360);
+        }
     }
 
     &__title {
         margin-top: vc(60);
 
-        h2 {
-            font-weight: 500;
-            font-size: vc(36);
-            line-height: vc(42);
+        @include devices {
+            margin-top: vc(40);
+        }
+
+        .h2 {
             text-align: center;
-            color: $color-white;
+
+            @include devices {
+                width: 100%;
+            }
         }
     }
 
@@ -25,13 +38,21 @@
         gap: vc(20);
         display: flex;
 
-        &_name {
+        @include devices {
+            flex-direction: column;
+            margin-top: vc(30);
+        }
 
+        &_name {
             input {
                 width: vc(265);
                 height: vc(50);
                 background: $color-white;
                 border-radius: vc(90);
+
+                @include devices {
+                    width: vc(292);
+                }
 
                 &::placeholder {
                     font-weight: 400;
@@ -39,17 +60,25 @@
                     line-height: vc(16);
                     color: #09091C;
                     text-align: center;
+
+                    @include devices {
+                        text-align: left;
+                        padding-left: vc(25);
+                    }
                 }
             }
         }
 
         &_namber {
-
             input {
                 width: vc(265);
                 height: vc(50);
                 background: $color-white;
                 border-radius: vc(90);
+
+                @include devices {
+                    width: vc(292);
+                }
 
                 &::placeholder {
                     font-weight: 400;
@@ -57,12 +86,16 @@
                     line-height: vc(16);
                     color: #09091C;
                     text-align: center;
+
+                    @include devices {
+                        text-align: left;
+                        padding-left: vc(25);
+                    }
                 }
             }
         }
 
         &_send {
-
             .button {
                 display: flex;
                 border-radius: vc(90);
@@ -71,6 +104,10 @@
                 line-height: vc(19);
                 text-align: center;
                 padding: vc(15) vc(91) vc(16) vc(91);
+
+                @include devices {
+                    padding: vc(15) vc(104);
+                }
 
                 &__primary {
                     background: $color-orange;
@@ -87,14 +124,31 @@
         margin-top: vc(30);
         margin-bottom: vc(59);
 
+        @include devices {
+            flex-direction: column;
+            margin-top: vc(20);
+            margin-bottom: vc(40);
+            gap: vc(12);
+        }
+
         &_pfone {
             display: flex;
 
+            @include devices {
+                max-width: vc(212);
+                align-items: center;
+            }
 
             svg {
                 width: vc(24);
                 height: vc(24);
                 margin-right: vc(20);
+
+                @include devices {
+                    width: vc(56);
+                    height: vc(32);
+                    margin-right: vc(10);
+                }
             }
 
             p {
@@ -103,6 +157,12 @@
                 line-height: vc(23);
                 color: $color-white;
                 margin-right: vc(7);
+
+                @include devices {
+                    font-size: vc(13);
+                    line-height: vc(15);
+                    margin: 0;
+                }
             }
 
             a {
@@ -111,6 +171,11 @@
                 line-height: vc(23);
                 color: $color-white;
                 transition: $transition;
+
+                @include devices {
+                    font-size: vc(13);
+                    line-height: vc(15);
+                }
 
                 &:hover {
                 text-decoration: underline;
@@ -121,10 +186,19 @@
         &_watsup {
             display: flex;
 
+            @include devices {
+                align-items: center;
+            }
+
             svg {
                 width: vc(24);
                 height: vc(24);
                 margin-right: vc(10);
+
+                @include devices {
+                    width: vc(32);
+                    height: vc(32);
+                }
             }
 
             a {
@@ -133,6 +207,11 @@
                 line-height: vc(19);
                 color: #26D52D;
                 transition: $transition;
+
+                @include devices {
+                    font-size: vc(13);
+                    line-height: vc(15);
+                }
 
                 &:hover {
                     text-decoration: underline;

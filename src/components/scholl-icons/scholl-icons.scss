@@ -1,9 +1,6 @@
 .scholl-icons {
-
     .container {
-        @include  devices {
-            padding: 0;
-        }
+        padding: 0;
     }
 
     &__icons {
@@ -17,7 +14,6 @@
         @include devices {
             width: vc(102);
             height: vc(148);
-
         }
 
         &_icon {
@@ -47,8 +43,6 @@
                     left: vc(22);
                 }
             }
-
-
         }
 
         h3 {
@@ -80,7 +74,6 @@
             position: relative;
             top: vc(90);
             max-width: vc(161);
-            height: auto;
 
             @include devices {
                 max-width: vc(117);

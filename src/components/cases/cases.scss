@@ -13,7 +13,6 @@
     }
 
     &__case {
-
         .h2 {
             width: vc(425);
             margin-right: vc(78);
@@ -112,9 +111,16 @@
                 gap: vc(10);
             }
 
-            .h3 {
+            h3 {
+                font-weight: 700;
+                font-size: vc(24);
+                line-height: vc(29);
+                color: $color-white;
+
                 @include devices {
-                    width: 100%;
+                    font-weight: 500;
+                    font-size: vc(16);
+                    line-height: vc(19);
                 }
             }
 
@@ -137,8 +143,8 @@
             }
         }
     }
-    @include devices {
 
+    @include devices {
         &__markers {
             margin-top: vc(10);
             display: flex;

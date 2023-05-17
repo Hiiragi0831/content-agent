@@ -2,10 +2,14 @@
     margin-top: vc(40);
     margin-bottom: vc(102);
 
+    @include devices {
+        margin-top: vc(28);
+        margin-bottom: vc(0);
+    }
+
     .container {
         display: flex;
         justify-content: space-between;
-
     }
 
     &__title {
@@ -38,8 +42,36 @@
 
         img {
             background: #312323;
-            border: 3px solid #1D0B0B;
-            border-radius: 20px;
+            border: vc(3) solid #1D0B0B;
+            border-radius: vc(20);
+        }
+    }
+
+    @include devices {
+        &__info {
+            display: flex;
+            flex-direction: column;
+
+            .h2 {
+                width: 100%;
+            }
+
+            img {
+                margin-top: vc(10);
+                margin-bottom: vc(20);
+                width: vc(360);
+                height: vc(238);
+                background: #312323;
+                border: vc(3) solid #1D0B0B;
+                border-radius: vc(20);
+            }
+
+            p {
+                font-weight: 400;
+                font-size: vc(13);
+                line-height: 149%;
+                color: $color-white;
+            }
         }
     }
 }

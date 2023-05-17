@@ -2,6 +2,11 @@
     margin-top: vc(163);
     margin-bottom: vc(110);
 
+    @include devices {
+        margin-top: vc(40);
+        margin-bottom: vc(40);
+    }
+
     .container {
         display: flex;
         gap: vc(40);
@@ -12,11 +17,10 @@
         width: vc(507);
         height: vc(493);
 
-
         img {
             background: #312323;
-            border: 3px solid #1D0B0B;
-            border-radius: 20px;
+            border: vc(3) solid #1D0B0B;
+            border-radius: vc(20);
         }
     }
 
@@ -38,6 +42,33 @@
             line-height: 149%;
             color: $color-white;
 
+        }
+    }
+
+    @include devices {
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: vc(20);
+
+            .h2 {
+                width: 100%;
+            }
+
+            img {
+                width: vc(360);
+                height: vc(289);
+                background: #312323;
+                border: vc(3) solid #1D0B0B;
+                border-radius: vc(20);
+            }
+
+            p {
+                font-weight: 400;
+                font-size: vc(13);
+                line-height: 149%;
+                color: $color-white;
+            }
         }
     }
 }
