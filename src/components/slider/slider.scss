@@ -1,6 +1,10 @@
 .slider {
     margin-top: vc(40);
 
+    @include devices {
+        margin-top: vc(10);
+    }
+
     .container {}
 
     &__logos {
@@ -8,6 +12,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include devices {
+            margin-bottom: vc(10);
+            gap: vc(11);
+        }
 
 
         &_logo {
@@ -19,6 +28,13 @@
             filter: grayscale(100%);
             transition: $transition;
 
+            @include devices {
+                width: vc(113);
+                height: vc(48);
+                border-radius: vc(5);
+                border: vc(1) solid #1D0B0B;
+            }
+
             p {
                 position: relative;
                 font-weight: 400;
@@ -27,7 +43,13 @@
                 top: vc(35);
                 left: vc(77);
                 color: #919191;
-                transition: $transition;
+
+                @include devices {
+                    font-size: vc(16);
+                    line-height: vc(19);
+                    top: vc(14);
+                    left: vc(14);
+                }
             }
 
             &:hover {
@@ -55,6 +77,24 @@
 
             &:hover {
                 background-color: $color-orange;
+            }
+        }
+    }
+
+    @include devices {
+
+        &__markers {
+            margin-top: vc(10);
+            display: flex;
+            justify-content: center;
+            gap: vc(10);
+            margin-bottom: vc(40);
+
+            &_marker {
+                width: vc(12);
+                height: vc(12);
+                border-radius: 100%;
+                background-color: $color-white;
             }
         }
     }

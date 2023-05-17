@@ -1,0 +1,38 @@
+@include devices {
+
+    .services-mob {
+
+        &__title {
+
+            h2 {
+                font-weight: 700;
+                font-size: vc(20);
+                line-height: vc(24);
+                color: $color-white;
+            }
+        }
+
+        &__menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px 16px;
+            grid-template-areas:
+            ". . ."
+            ". . .";
+
+            &_item {
+                background: rgba(49, 35, 35, 0.9);
+                border: 1px solid #1D0B0B;
+                border-radius: 10px;
+
+                p {
+                    font-weight: 700;
+                    font-size: vc(16);
+                    line-height: vc(19);
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}

@@ -1,20 +1,26 @@
-.cases{
+.cases {
+    @include devices {
+        margin-top: vc(35);
+    }
 
     .container {
         display: flex;
         justify-content: space-between;
+
+        @include devices {
+            flex-direction: column;
+        }
     }
 
     &__case {
 
-        h2 {
-            font-style: normal;
-            font-weight: 700;
-            font-size: vc(48);
-            color: $color-white;
+        .h2 {
             width: vc(425);
-            height: vc(58);
             margin-right: vc(78);
+
+            @include devices {
+                width: 100%;
+            }
         }
 
         img {
@@ -22,7 +28,6 @@
             height: vc(198);
             position: absolute;
             left: vc(30);
-
         }
     }
 
@@ -77,11 +82,23 @@
         border-radius: vc(20);
         padding-left: vc(20);
         padding-top: vc(20);
-        width: vc(632);
+
+        @include devices {
+            border: none;
+            background: none;
+            padding: 0;
+            margin-top: vc(10);
+            gap: vc(17);
+        }
 
         img {
             width: vc(191);
             height: vc(182);
+
+            @include devices {
+                width: vc(100);
+                height: vc(95);
+            }
         }
 
         &_work {
@@ -90,22 +107,49 @@
             margin-left: vc(21);
             gap: vc(11);
 
-            h3 {
-                font-style: normal;
-                font-weight: 700;
-                font-size: vc(24);
-                line-height: vc(29);
-                color: $color-white;
+            @include devices {
+                margin: 0;
+                gap: vc(10);
+            }
+
+            .h3 {
+                @include devices {
+                    width: 100%;
+                }
             }
 
             p {
-                font-style: normal;
                 font-weight: 400;
                 font-size: vc(14);
                 line-height: vc(21);
                 color: $color-white;
                 padding-right: vc(27);
                 padding-bottom: vc(35);
+
+                @include devices {
+                    font-weight: 400;
+                    font-size: vc(10);
+                    line-height: vc(14);
+                    overflow: hidden;
+                    padding: 0;
+                    max-height: vc(60);
+                }
+            }
+        }
+    }
+    @include devices {
+
+        &__markers {
+            margin-top: vc(10);
+            display: flex;
+            justify-content: center;
+            gap: vc(10);
+
+            &_marker {
+                width: vc(12);
+                height: vc(12);
+                border-radius: 100%;
+                background-color: $color-white;
             }
         }
     }

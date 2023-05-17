@@ -2,12 +2,12 @@ mixin services()
     .services
         .container
             .services__service
-                h2 Наши услуги
+                h2.h2 Наши услуги
                 +picture({
                     path: `${baseDir}assets/images/services/rightallepsarrow`,
                     ext: `png`,
-                })
-            .services__list
+                }).for-desktop
+            .services__list.for-desktop
                 ul
                     li
                         a(href="#") Съемки сторис
@@ -23,14 +23,13 @@ mixin services()
                         a(href="#") Бекстейдж
                     li
                         a(href="#") Все услуги
-            .services__icon
+            .services__icon.for-desktop
                     +svg("down-arrow")
-            //.services__items
-                .services__item
-                    p Идея
-                    p Видео
-                    p Фото
-                    p Аудио
-                    p Текст
-                    p Печатная
+            .services__items.for-devices
+                a(href="#").services__items_item Идея
+                a(href="#").services__items_item Видео
+                a(href="#").services__items_item Фото
+                a(href="#").services__items_item Аудио
+                a(href="#").services__items_item Текст
+                a(href="#").services__items_item Печатня
 

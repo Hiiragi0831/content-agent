@@ -1,6 +1,10 @@
 .project {
     margin-top: vc(120);
 
+    @include devices {
+        margin-top: vc(40);
+    }
+
     .container {
         display: flex;
         flex-direction: column;
@@ -10,11 +14,14 @@
     &__our {
         margin-bottom: vc(40);
 
+        @include devices {
+            margin-bottom: vc(20);
+        }
+
         h2 {
-            font-style: normal;
-            font-weight: 700;
-            font-size: vc(48);
-            color: $color-white;
+            @include devices {
+                width: 100%;
+            }
         }
     }
 
@@ -24,5 +31,27 @@
         grid-template-rows: 1fr;
         gap: 0 vc(37);
         grid-template-areas: ". . .";
+
+        @include devices {
+            gap: 0 vc(7);
+            overflow: hidden;
+        }
+    }
+
+    @include devices {
+
+        &__markers {
+            margin-top: vc(20);
+            display: flex;
+            justify-content: center;
+            gap: vc(10);
+
+            &_marker {
+                width: vc(12);
+                height: vc(12);
+                border-radius: 100%;
+                background-color: $color-white;
+            }
+        }
     }
 }

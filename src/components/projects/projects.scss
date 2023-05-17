@@ -3,22 +3,38 @@
     .container {
         display: flex;
         flex-direction: column;
+
+        @include devices {
+            padding: 0;
+        }
     }
 
     &__img {
         width: vc(365);
         height: vc(261);
         border-radius: vc(10);
+
+        @include devices {
+            width: vc(169);
+            height: vc(120);
+        }
     }
 
     &__title {
-        font-style: normal;
         font-weight: 500;
         font-size: vc(24);
         line-height: vc(28);
         color: $color-white;
         margin-top: vc(20);
         margin-bottom: vc(15);
+
+        @include  devices {
+            font-weight: 500;
+            font-size: vc(15);
+            line-height: vc(18);
+            margin-top: vc(10);
+            margin-bottom: vc(5);
+        }
     }
 
     &__info {
@@ -26,13 +42,23 @@
         gap: vc(20);
         align-items: center;
 
+        @include devices {
+            flex-direction: column;
+            gap: vc(10);
+            align-items: flex-start;
+        }
+
         p {
-            width: vc(78);
-            height: vc(28);
             font-weight: 500;
             font-size: vc(24);
             line-height: vc(28);
             color: $color-orange;
+
+            @include devices {
+                font-size: vc(14);
+                line-height: vc(16);
+                order: 1;
+            }
         }
     }
 }

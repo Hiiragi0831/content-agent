@@ -2,6 +2,10 @@
 
     .container {
         margin-bottom: vc(85);
+
+        @include devices {
+            margin-bottom: 0;
+        }
     }
 
     &__service {
@@ -9,14 +13,16 @@
         justify-content: flex-start;
         margin-top: vc(95);
 
-        h2 {
-            font-style: normal;
-            font-weight: 700;
-            font-size: vc(48);
-            color: $color-white;
+        @include devices {
+            margin-top: vc(28);
+        }
+
+        .h2 {
             width: vc(266);
-            height: vc(116);
-            position: relative;
+
+            @include devices {
+                width: 100%;
+            }
         }
 
         img {
@@ -76,6 +82,28 @@
             width: vc(76);
             height: vc(48);
             top: vc(15);
+        }
+    }
+
+    &__items {
+        margin-top: vc(10);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: vc(10) vc(10);
+        grid-template-areas:
+        ". . ."
+        ". . .";
+
+        &_item {
+            background: rgba(49, 35, 35, 0.9);
+            border: vc(1) solid #1D0B0B;
+            border-radius: vc(10);
+            padding-top: vc(18);
+            color: $color-white;
+            text-align: center;
+            width: vc(109);
+            height: vc(54);
         }
     }
 }

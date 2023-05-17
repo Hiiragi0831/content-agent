@@ -1,14 +1,18 @@
 .partners {
     margin-top: vc(100);
 
+    @include devices {
+        margin-top: vc(40);
+    }
+
     .container {}
 
     &__title {
 
         h2 {
-            font-weight: 700;
-            font-size: vc(48);
-            color: $color-white;
+            @include devices {
+                width: 100%;
+            }
         }
     }
 }

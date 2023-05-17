@@ -6,7 +6,7 @@ mixin header
                     path: `${baseDir}assets/images/header/logo`,
                     ext: `png`,
                 })
-            .header__socials
+            .header__socials.for-desktop
                 a(href="#").header__social
                     +svg("watsup")
                 a(href="#").header__social
@@ -19,6 +19,7 @@ mixin header
                     +svg("youtube")
                 a(href="#").header__social
                     +svg("rutube")
-            .header__contacts
+            .header__contacts.for-desktop
                 +exposure("email", "E-mail", "example@gmail.com", "mailto:example@gmail.com")
                 +exposure("telephone", "Телефон:", "+7(495) 331 33 67", "#")
+            .header__menu.for-devices

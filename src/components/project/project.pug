@@ -2,8 +2,13 @@ mixin project()
     .project
         .container
             .project__our
-                h2 Наши проекты
+                h2.h2 Наши проекты
             .project__projects
                 +projects(`${baseDir}assets/images/projects/Frame14`, 'Название проекта', '1 500 Р')
                 +projects(`${baseDir}assets/images/projects/Frame15`, 'Название проекта', '1 500 Р')
                 +projects(`${baseDir}assets/images/projects/Frame16`, 'Название проекта', '1 500 Р')
+            .project__markers.for-devices
+                .project__markers_marker
+                .project__markers_marker
+                .project__markers_marker
+                .project__markers_marker

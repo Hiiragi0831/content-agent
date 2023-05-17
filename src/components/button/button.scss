@@ -7,8 +7,16 @@
     padding: vc(16) vc(47);
     flex-shrink: 0;
 
+    @include devices {
+        font-size: vc(9);
+        line-height: vc(11);
+        padding: vc(9) vc(29);
+        order: 2;
+    }
+
     &__primary {
         background: $color-orange;
         color: $color-black;
+
     }
 }

@@ -7,6 +7,11 @@
     border-radius: vc(10);
     overflow: hidden;
 
+    @include devices {
+        width: vc(169);
+        height: vc(120);
+    }
+
     &__img {
         &:after {
             content: '';
@@ -38,11 +43,23 @@
         overflow: hidden;
         z-index: 2;
 
+        @include devices {
+            left: vc(-6);
+            padding: vc(9) vc(24) vc(9) vc(13);
+            width: auto;
+        }
+
+
         h3 {
             font-weight: 700;
             font-size: vc(24);
             line-height: vc(29);
             color: $color-black;
+
+            @include devices {
+                font-size: vc(14);
+                line-height: vc(17);
+            }
         }
     }
 

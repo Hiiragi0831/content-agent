@@ -2,7 +2,6 @@
     margin-bottom: vc(110);
     margin-top: vc(100);
 
-    .container {}
 
     &__title {
         margin-bottom: vc(30);
@@ -16,8 +15,10 @@
     }
 
     &__info {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         justify-content: space-between;
+        gap: vc(22);
     }
 }
 

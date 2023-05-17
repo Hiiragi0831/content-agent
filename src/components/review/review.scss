@@ -1,7 +1,7 @@
 .review {
+    position: relative;
+
     &__infos {
-        width: vc(375);
-        height: vc(245);
         background: #1E1516;
         box-shadow: 0 0 vc(14) rgba(0, 0, 0, 0.15);
         border-radius: vc(10);
@@ -19,15 +19,12 @@
 
         &_svg2 {
             position: absolute;
-            top: vc(83);
+            top: vc(126);
+            left: vc(39);
             z-index: -1;
 
             svg {
                 fill: #1E1516;
-
-                @include devices{
-                    fill: red;
-                }
             }
         }
 

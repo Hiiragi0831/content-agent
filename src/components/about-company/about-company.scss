@@ -1,20 +1,29 @@
 .about-company {
     margin-top: vc(100);
 
-    .container {
+    @include devices {
+        margin-top: vc(40);
     }
+
+    .container {}
 
     &__about {
         margin-bottom: vc(49);
         display: flex;
         justify-content: space-between;
-        height: vc(116);
+
+        @include devices {
+            flex-direction: column;
+            gap: vc(10);
+            margin-bottom: vc(20);
+        }
 
         h2 {
-            font-weight: 700;
-            font-size: vc(48);
-            color: $color-white;
             margin-right: vc(96);
+
+            @include devices {
+                width: 100%;
+            }
         }
 
         p {
@@ -24,6 +33,9 @@
             line-height: 149%;
             color: $color-white;
 
+            @include devices {
+                font-size: vc(12);
+            }
         }
     }
 
@@ -37,9 +49,19 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 21px 25px;
+        gap: vc(21) vc(25);
         grid-template-areas:
         ". . ."
         ". . .";
+
+        @include devices {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: vc(20) vc(7);
+            grid-template-areas:
+            ". ."
+            ". ."
+            ". .";
+        }
     }
 }

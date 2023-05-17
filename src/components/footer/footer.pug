@@ -2,23 +2,23 @@ mixin footer()
     footer.footer
         .container
             .footer__info
-                .footer__info_logo
+                .footer__logo
                     +picture({
                         path: `${baseDir}assets/images/header/logo`,
                         ext: `png`,
                     })
-                .footer__info_sections
+                .footer__sections.for-desktop
                     h3 Разделы
-                    .footer__info_sections-section
+                    .footer__sections-section.for-desktop
                         p Идея
                         p Видео
                         p Фото
                         p Аудио
                         p Текст
                         p Печатня
-                .footer__info_contacts
-                    h3 Контакты
-                    .footer__info_contacts-contact
+                .footer__contacts
+                    h3.for-desktop Контакты
+                    .footer__contacts-contact
                         +exposure("email", "E-mail", "example@gmail.com", "mailto:example@gmail.com")
                         +exposure("telephone", "Телефон:", "+7(495) 331 33 67", "#")
             .footer__copyright
