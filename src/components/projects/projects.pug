@@ -1,0 +1,13 @@
+mixin projects(icon, name, price)
+    .projects
+        .container
+            .projects__img
+                +picture({
+                    path: icon,
+                    ext: `png`,
+                })(icon)
+            .projects__title
+                h3!= name
+            .projects__info
+                +button("Подробнее", "#")
+                p.projects__price!= price

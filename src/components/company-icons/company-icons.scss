@@ -1,0 +1,89 @@
+.company-icons {
+    $p: &;
+
+    position: relative;
+    border-radius: vc(10);
+    display: block;
+    overflow: hidden;
+
+    &__img {
+        &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(180deg, rgba(49, 35, 35, 0) 0%, rgba(49, 35, 35, 0.84) 55.52%, #1B1818 100%);
+            transform: translateY(45%);
+            transition: $transition;
+
+            @include devices {
+                transform: none;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        width: vc(236);
+        left: vc(18);
+        top: 0;
+        background: #F3C934;
+        border-radius: 0 0 vc(10) vc(10);
+        padding: vc(15);
+        overflow: hidden;
+        z-index: 2;
+
+        @include devices {
+            left: vc(-6);
+            padding: vc(9) vc(24) vc(9) vc(13);
+            width: auto;
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: vc(24);
+            line-height: vc(29);
+            color: $color-black;
+
+            @include devices {
+                font-size: vc(14);
+                line-height: vc(17);
+            }
+        }
+    }
+
+    &__name {
+        position: absolute;
+        left: vc(25);
+        bottom: vc(25);
+
+        p {
+            max-width: vc(210);
+            font-weight: 600;
+            font-size: vc(20);
+            line-height: vc(24);
+            color: $color-white;
+
+            @include devices {
+                font-size: vc(14);
+                line-height: vc(17);
+                max-width: vc(112);
+            }
+        }
+    }
+
+    &:hover{
+        #{$p}__img {
+            &:after {
+                transform: translateY(0);
+            }
+        }
+    }
+}

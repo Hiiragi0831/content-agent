@@ -1,0 +1,8 @@
+mixin scholl-icons(icon, name, title)
+    .scholl-icons
+        .container
+            .scholl-icons__icons
+                .scholl-icons__icons_icon
+                    +svg(icon)
+                h3!= name
+                p!= title

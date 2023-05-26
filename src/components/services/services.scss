@@ -1,0 +1,109 @@
+.services {
+
+    .container {
+        margin-bottom: vc(85);
+
+        @include devices {
+            margin-bottom: 0;
+        }
+    }
+
+    &__service {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: vc(95);
+
+        @include devices {
+            margin-top: vc(28);
+        }
+
+        .h2 {
+            width: vc(266);
+
+            @include devices {
+                width: 100%;
+            }
+        }
+
+        img {
+            width: vc(191);
+            height: vc(191);
+            position: absolute;
+            left: vc(200);
+            top: vc(-35);
+        }
+    }
+
+    &__list {
+        width: vc(324);
+        height: vc(294);
+        margin-top: vc(26);
+
+        ul {
+            background: rgba(49, 35, 35, 0.9);
+            border: vc(3) solid #1D0B0B;
+            border-radius: vc(20);
+            padding: vc(25) vc(78) vc(15) vc(25);
+
+            li {
+                font-style: normal;
+                font-weight: 400;
+                font-size: vc(16);
+                color: $color-white;
+
+
+                &:not(:last-child) {
+                    line-height: vc(35);
+                }
+
+                &:last-child {
+                    margin-top: vc(25);
+                }
+
+                &:hover {
+                    text-decoration-line: underline;
+                    color: $color-orange;
+                    $transition-duration: 0.35s;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        width: vc(80);
+        height: vc(80);
+        border: vc(2) solid $color-orange;
+        border-radius: 100%;
+        position: relative;
+        left: vc(550);
+
+        svg {
+            position: relative;
+            width: vc(76);
+            height: vc(48);
+            top: vc(15);
+        }
+    }
+
+    &__items {
+        margin-top: vc(10);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: vc(10) vc(10);
+        grid-template-areas:
+        ". . ."
+        ". . .";
+
+        &_item {
+            background: rgba(49, 35, 35, 0.9);
+            border: vc(1) solid #1D0B0B;
+            border-radius: vc(10);
+            padding-top: vc(18);
+            color: $color-white;
+            text-align: center;
+            width: vc(109);
+            height: vc(54);
+        }
+    }
+}

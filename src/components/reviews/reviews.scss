@@ -1,0 +1,49 @@
+.reviews {
+    margin-bottom: vc(110);
+    margin-top: vc(100);
+
+    @include devices {
+        margin-top: vc(40);
+        margin-bottom: vc(0);
+    }
+
+    &__title {
+        margin-bottom: vc(30);
+
+        .h2 {
+            @include devices {
+                width: 100%;
+            }
+        }
+    }
+
+    &__infos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        gap: vc(22);
+
+        &__infos {
+            @include devices {
+                display: block;
+            }
+        }
+    }
+
+    @include devices {
+        &__markers {
+            margin-top: vc(80);
+            display: flex;
+            justify-content: center;
+            gap: vc(10);
+
+            &_marker {
+                width: vc(12);
+                height: vc(12);
+                border-radius: 100%;
+                background-color: $color-white;
+            }
+        }
+    }
+}
+

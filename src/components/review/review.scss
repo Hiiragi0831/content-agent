@@ -1,0 +1,101 @@
+.review {
+    position: relative;
+
+    &__infos {
+        background: #1E1516;
+        box-shadow: 0 0 vc(14) rgba(0, 0, 0, 0.15);
+        border-radius: vc(10);
+
+        &_img1 {
+            position: absolute;
+            top: vc(15);
+            left: vc(160);
+
+            @include devices {
+                left: vc(145);
+            }
+        }
+
+        &_svg2 {
+            position: absolute;
+            top: vc(127);
+            left: vc(0);
+            z-index: -1;
+
+            @include devices {
+                top: vc(180);
+                left: vc(25);
+            }
+
+            svg {
+                fill: #1E1516;
+            }
+        }
+
+        &_info {
+            padding: vc(38) vc(33) vc(18) vc(33);
+
+            p {
+                font-weight: 400;
+                font-size: vc(13);
+                line-height: vc(18);
+                text-align: center;
+                color: $color-white;
+
+                @include devices {
+
+                }
+            }
+
+            h3 {
+                font-weight: 700;
+                font-size: vc(16);
+                line-height: vc(22);
+                text-align: center;
+                color: $color-white;
+                padding-top: vc(19);
+                padding-bottom: vc(54);
+
+                &::before {
+                    content: '';
+                    width: vc(10);
+                    height: vc(1);
+                    background-color: #29AAE3;
+                    position: absolute;
+                    top: vc(175);
+                    left: vc(110);
+
+                    @include devices {
+                        left: vc(95);
+                        top: vc(193);
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    width: vc(10);
+                    height: vc(1);
+                    background-color: #29AAE3;
+                    position: absolute;
+                    top: vc(175);
+                    left: vc(253);
+
+                    @include devices {
+                        top: vc(193);
+                    }
+                }
+            }
+        }
+
+        &_img2 {
+            position: absolute;
+            top: vc(230);
+            left: vc(158);
+
+            @include devices {
+                top: vc(250);
+                left: vc(145);
+            }
+        }
+    }
+}

@@ -9,6 +9,37 @@
 @import "fonts";
 @import "base";
 @import "helpers";
+@import "typography";
+
+@import "pages/catalog";
+@import "pages/category-page";
 
 @import "@components/category/category";
 @import "@components/header/header";
+@import "@components/services/services";
+@import "@components/exposure/exposure";
+@import "@components/cases/cases";
+@import "@components/scholl/scholl";
+@import "@components/scholl-icons/scholl-icons";
+@import "@components/project/project";
+@import "@components/projects/projects";
+@import "@components/button/button";
+@import "@components/about-company/about-company";
+@import "@components/company-icons/company-icons";
+@import "@components/partners/partners";
+@import "@components/slider/slider";
+@import "@components/footer/footer";
+@import "@components/links/links";
+@import "@components/names-category/names-category";
+@import "@components/page-info/page-info";
+@import "@components/advantages/advantages";
+@import "@components/beginning/beginning";
+@import "@components/reviews/reviews";
+@import "@components/review/review";
+@import "@components/about-service/about-service";
+@import "@components/famyli-videos/famyli-videos";
+@import "@components/text-blok/text-blok";
+@import "@components/text-bloks/text-bloks";
+@import "@components/home-video/home-video";
+@import "@components/questions/questions";
+@import "@components/text/text";

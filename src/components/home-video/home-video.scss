@@ -1,0 +1,228 @@
+.home-video {
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: vc(48);
+        margin-bottom: vc(60);
+
+        @include devices {
+            display: flex;
+            flex-direction: column;
+            margin-top: vc(40);
+            margin-bottom: vc(40);
+        }
+    }
+
+    &__img {
+        .h2 {
+            @include devices {
+                width: 100%;
+                margin-bottom: vc(10);
+            }
+        }
+
+
+        &_main {
+            margin-bottom: vc(21);
+
+            img {
+                background: #312323;
+                border: vc(3) solid #1D0B0B;
+                border-radius: vc(20);
+                width: vc(615);
+                height: vc(406);
+
+                @include devices {
+                    width: vc(360);
+                    height: vc(238);
+                }
+            }
+        }
+
+        &_secondary {
+            display: flex;
+            gap: vc(14);
+
+            img {
+                background: #312323;
+                border: vc(3) solid #1D0B0B;
+                border-radius: vc(20);
+                object-fit: cover;
+                width: vc(159);
+                height: vc(105);
+
+                @include devices {
+                    width: vc(109);
+                    height: vc(72);
+                    border: vc(2) solid #1D0B0B;
+                    border-radius: vc(5);
+                }
+            }
+        }
+    }
+
+    &__title {
+        .h2 {
+            margin-bottom: vc(20);
+
+            @include devices {
+                width: 100%;
+            }
+        }
+
+        &_abilities {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: vc(20);
+            border-bottom: vc(1) solid #C1C1C1;
+
+            @include devices {
+                margin-top: vc(20);
+            }
+
+            &-price {
+                display: flex;
+                flex-direction: column;
+                gap: vc(5);
+
+                p {
+                    font-weight: 500;
+                    font-size: vc(20);
+                    line-height: vc(24);
+                    color: $color-white;
+
+                    @include devices {
+                        font-size: vc(16);
+                        line-height: vc(19);
+                    }
+                }
+
+                h3 {
+                    font-weight: 700;
+                    font-size: vc(32);
+                    line-height: vc(39);
+                    color: $color-orange;
+
+                    @include devices {
+                        font-size: vc(26);
+                        line-height: vc(31);
+                    }
+                }
+            }
+
+            &-data {
+                display: flex;
+                flex-direction: column;
+                gap: vc(5);
+
+                p {
+                    font-weight: 500;
+                    font-size: vc(20);
+                    line-height: vc(24);
+                    color: $color-white;
+
+                    @include devices {
+                        font-size: vc(16);
+                        line-height: vc(19);
+                    }
+                }
+
+                h3 {
+                    font-weight: 700;
+                    font-size: vc(32);
+                    line-height: vc(39);
+                    color: $color-orange;
+
+                    @include devices {
+                        font-size: vc(26);
+                        line-height: vc(31);
+                    }
+                }
+            }
+        }
+
+        &_description {
+            max-width: vc(515);
+            margin-bottom: vc(20);
+
+            h3 {
+                font-weight: 500;
+                font-size: vc(20);
+                line-height: vc(24);
+                color: $color-white;
+                margin-bottom: vc(10);
+                margin-top: vc(20);
+
+                @include devices {
+                    font-size: vc(16);
+                    line-height: vc(19);
+                }
+            }
+
+            p {
+                font-weight: 400;
+                font-size: vc(13);
+                line-height: 149%;
+                color: $color-white;
+
+                @include devices {
+                    font-size: vc(13);
+                }
+            }
+        }
+
+        &_payment {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: vc(1) solid #C1C1C1;
+            padding-top: vc(20);
+
+            &-way {
+                display: flex;
+                flex-direction: column;
+                gap: vc(10);
+
+                @include devices {
+                    gap: vc(5);
+                }
+
+                p {
+                    font-weight: 500;
+                    font-size: vc(20);
+                    line-height: vc(24);
+                    color: $color-white;
+
+                    @include devices {
+                        font-size: vc(16);
+                        line-height: vc(19);
+                    }
+                }
+
+                img {
+                    width: vc(156);
+                    height: vc(28);
+
+                    @include devices {
+                        width: vc(128);
+                        height: vc(23);
+                    }
+                }
+            }
+
+            &-order {
+                a {
+                    font-weight: 600;
+                    font-size: vc(16);
+                    line-height: vc(19);
+
+                    @include devices {
+                        font-size: vc(13);
+                        line-height: vc(16);
+                    }
+                }
+            }
+        }
+    }
+}

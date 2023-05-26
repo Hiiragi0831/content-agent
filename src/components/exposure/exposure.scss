@@ -1,0 +1,47 @@
+.exposure {
+    display: flex;
+    flex-direction: column;
+
+    .container {}
+
+    &__icon {
+        width: vc(42);
+        height: vc(42);
+        border: vc(1) solid $color-orange;
+        border-radius: 100%;
+        position: absolute;
+
+        svg {
+            position: relative;
+            width: vc(18);
+            height: vc(18);
+            top: vc(10);
+            left: vc(10);
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        margin-left: vc(50);
+
+        p {
+            font-weight: (300);
+            font-size: vc(15);
+            color: #FFFFFF;
+            opacity: 0.6;
+        }
+
+        a {
+            font-weight: (500);
+            font-size: vc(18);
+            color: #FFFFFF;
+            transition: $transition;
+
+            &:hover {
+                text-shadow: black vc(2) vc(2);
+
+            }
+        }
+    }
+}

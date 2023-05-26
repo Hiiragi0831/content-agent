@@ -1,0 +1,86 @@
+.scholl-icons {
+    .container {
+        padding: 0;
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: column;
+        gap: vc(10);
+        width: vc(161);
+        height: vc(185);
+        align-items: center;
+
+        @include devices {
+            width: vc(102);
+            height: vc(148);
+        }
+
+        &_icon {
+            width: vc(127);
+            height: vc(127);
+            background: rgba(55, 39, 40, 0.6);
+            border: vc(2) solid $color-orange;
+            border-radius: 100%;
+            position: absolute;
+
+            @include devices {
+                width: vc(101);
+                height: vc(101);
+            }
+
+            svg {
+                position: relative;
+                width: vc(65);
+                height: vc(65);
+                top: vc(27);
+                left: vc(27);
+
+                @include devices {
+                    width: vc(48);
+                    height: vc(48);
+                    top: vc(25);
+                    left: vc(22);
+                }
+            }
+        }
+
+        h3 {
+            position: relative;
+            width: vc(36);
+            height: vc(36);
+            background: rgba(55, 39, 40, 1);
+            border: vc(1) dashed $color-orange;
+            border-radius: 100%;
+            font-weight: 800;
+            font-size: vc(13);
+            line-height: vc(16);
+            text-align: center;
+            color: $color-orange;
+            padding-top: vc(8);
+            left: vc(44);
+
+            @include devices {
+                left: vc(32);
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: vc(20);
+            line-height: vc(23);
+            text-align: center;
+            color: $color-white;
+            position: relative;
+            top: vc(90);
+            max-width: vc(161);
+
+            @include devices {
+                max-width: vc(117);
+                font-size: vc(14);
+                line-height: vc(16);
+                top: vc(70);
+            }
+        }
+    }
+}

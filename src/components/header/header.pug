@@ -6,28 +6,20 @@ mixin header
                     path: `${baseDir}assets/images/header/logo`,
                     ext: `png`,
                 })
-            .header__socials
-                a(href="#").header__socials_social
+            .header__socials.for-desktop
+                a(href="#").header__social
                     +svg("watsup")
-                a(href="#").header__socials_social
+                a(href="#").header__social
                     +svg("telegram")
-                a(href="#").header__socials_social
+                a(href="#").header__social
                     +svg("vk")
-                a(href="#").header__socials_social
+                a(href="#").header__social
                     +svg("tiktok")
-                a(href="#").header__socials_social
+                a(href="#").header__social
                     +svg("youtube")
-                a(href="#").header__socials_social
+                a(href="#").header__social
                     +svg("rutube")
-            .header__contacts
-                .header__contact-mail
-                    +svg("Ellipseforphoneandemail")
-                    +svg("email")
-                p E-mail
-                a(href="#") example@gmail.com
-                .header__contact-phone
-                    +svg("Ellipseforphoneandemail")
-                    +svg("telephone")
-                p Телефон:
-                a(href="#") +7(495) 331 33 67
-
+            .header__contacts.for-desktop
+                +exposure("email", "E-mail", "example@gmail.com", "mailto:example@gmail.com")
+                +exposure("telephone", "Телефон:", "+7(495) 331 33 67", "#")
+            .header__menu.for-devices

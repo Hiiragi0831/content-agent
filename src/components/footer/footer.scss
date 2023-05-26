@@ -1,0 +1,111 @@
+.footer {
+    background: #251A1A;
+    z-index: 2;
+    position: relative;
+
+    .container {}
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: vc(35);
+
+        @include devices {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        width: vc(263);
+        margin-top: vc(5);
+
+        @include devices {
+            margin: 0;
+            margin-bottom: vc(30);
+        }
+    }
+
+    &__sections {
+        h3 {
+            font-weight: 700;
+            font-size: vc(24);
+            line-height: vc(29);
+            color: $color-white;
+        }
+
+        &-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 26px 50px;
+            grid-template-areas: ". . ." ". . .";
+            margin-top: vc(20);
+
+            p {
+                font-weight: 400;
+                font-size: vc(20);
+                line-height: vc(23);
+                color: $color-white;
+                opacity: 0.6;
+                transition: $transition;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        @include devices {
+            width: 100%;
+        }
+    }
+
+    &__contacts {
+        h3 {
+            font-weight: 700;
+            font-size: vc(24);
+            line-height: vc(29);
+            color: $color-white;
+        }
+
+        &-contact {
+            display: flex;
+            gap: vc(30);
+            margin-top: vc(24);
+
+            @include devices {
+                flex-direction: column;
+                margin-top: vc(0);
+            }
+        }
+    }
+
+    &__copyright {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: vc(40);
+
+        @include devices {
+            margin-top: vc(30);
+        }
+
+        p {
+            font-weight: 500;
+            font-size: vc(14);
+            line-height: vc(16);
+            text-align: center;
+            color: $color-white;
+            position: relative;
+            margin-top: vc(20);
+            padding-bottom: vc(20);
+
+            @include devices{
+                font-weight: 400;
+                font-size: vc(12);
+                line-height: vc(14);
+                opacity: 0.6;
+            }
+        }
+    }
+}

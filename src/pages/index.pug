@@ -14,16 +14,17 @@ append vars
 
     each metaValue, metaKey in data.general.meta
         - meta[metaKey] = metaValue
+    - body.classList = 'bg-image'
 
 block content
     +header()
     main
-        +category({
-            title: "Hello world",
-            icon: "email"
-        })
-        +picture({
-            path: `${baseDir}assets/images/header/logo`,
-            ext: `png`,
-        })
+        +services()
+        +cases()
+        +scholl()
+        +project()
+        +about-company()
+        +partners()
     footer
+        +footer()
+        //+exposure("telephone", "Телефон:", "+7(495) 331 33 67", "#")

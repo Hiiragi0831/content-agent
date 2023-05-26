@@ -1,0 +1,13 @@
+mixin company-icons(icon, title, name)
+    a(href="#").company-icons
+        .company-icons__img
+            +picture({
+                path: icon,
+                ext: `png`,
+            })(icon)
+            if title
+                .company-icons__title
+                    h3!=title
+            else
+        .company-icons__name
+            p!= name

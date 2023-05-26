@@ -1,0 +1,35 @@
+mixin services()
+    .services
+        .container
+            .services__service
+                h2.h2 Наши услуги
+                +picture({
+                    path: `${baseDir}assets/images/services/rightallepsarrow`,
+                    ext: `png`,
+                }).for-desktop
+            .services__list.for-desktop
+                ul
+                    li
+                        a(href="#") Съемки сторис
+                    li
+                        a(href="#") Съемки вертикальных видео
+                    li
+                        a(href="#") Съемки для ютуб, рутуб
+                    li
+                        a(href="#") Вирусное видео
+                    li
+                        a(href="#") Аэросъемка
+                    li
+                        a(href="#") Бекстейдж
+                    li
+                        a(href="#") Все услуги
+            .services__icon.for-desktop
+                    +svg("down-arrow")
+            .services__items.for-devices
+                a(href="#").services__items_item Идея
+                a(href="#").services__items_item Видео
+                a(href="#").services__items_item Фото
+                a(href="#").services__items_item Аудио
+                a(href="#").services__items_item Текст
+                a(href="#").services__items_item Печатня
+
