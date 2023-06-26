@@ -1,8 +1,10 @@
 .slider {
     margin-top: vc(40);
+    margin-bottom: vc(95);
 
     @include devices {
         margin-top: vc(10);
+        margin-bottom: vc(40);
     }
 
     .container {}
@@ -65,7 +67,6 @@
         display: flex;
         justify-content: center;
         gap: vc(22);
-        margin-bottom: vc(95);
 
         &_marker {
             width: vc(22);
@@ -87,7 +88,6 @@
             display: flex;
             justify-content: center;
             gap: vc(10);
-            margin-bottom: vc(40);
 
             &_marker {
                 width: vc(12);

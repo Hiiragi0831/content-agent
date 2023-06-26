@@ -79,8 +79,7 @@
         background: rgba(49, 35, 35, 0.6);
         border: vc(3) solid #1D0B0B;
         border-radius: vc(20);
-        padding-left: vc(20);
-        padding-top: vc(20);
+        padding: vc(20) vc(27) vc(35) vc(20);
 
         @include devices {
             border: none;
@@ -129,8 +128,6 @@
                 font-size: vc(14);
                 line-height: vc(21);
                 color: $color-white;
-                padding-right: vc(27);
-                padding-bottom: vc(35);
 
                 @include devices {
                     font-weight: 400;
