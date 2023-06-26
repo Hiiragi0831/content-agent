@@ -11,7 +11,6 @@
     &__service {
         display: flex;
         justify-content: flex-start;
-        margin-top: vc(95);
 
         @include devices {
             margin-top: vc(28);

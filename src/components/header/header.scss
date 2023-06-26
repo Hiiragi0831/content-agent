@@ -1,5 +1,8 @@
 .header {
-    margin-top: vc(31);
+    top: vc(31);
+    width: 100%;
+    position: absolute;
+    z-index: 1;
 
     @include devices {
         margin-top: vc(15);

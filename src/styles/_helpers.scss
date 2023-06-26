@@ -68,6 +68,7 @@
 /* stylelint-enable */
 
 .bg-image {
+    position: relative;
     &:before {
         content: "";
         position: absolute;
