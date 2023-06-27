@@ -29,25 +29,28 @@
         gap: vc(25);
 
         @include  devices {
-            flex-wrap: wrap;
-            gap: vc(25);
+            flex-flow: wrap;
+            justify-content: space-evenly;
+            gap: vc(30) vc(19);
         }
     }
 
-    @include devices {
-        &__services {
-
-            &_service1 {
-                display: flex;
-                gap: vc(16);
-                margin-bottom: vc(30);
-            }
-
-            &_service2 {
-                display: flex;
-                justify-content: center;
-                gap: vc(58);
-            }
-        }
-    }
+    //@include devices {
+    //    &__services {
+    //        display: flex;
+    //        flex-wrap: wrap;
+    //
+    //        &_service1 {
+    //            //display: flex;
+    //            gap: vc(16);
+    //            margin-bottom: vc(30);
+    //        }
+    //
+    //        &_service2 {
+    //            //display: flex;
+    //            //justify-content: center;
+    //            gap: vc(58);
+    //        }
+    //    }
+    //}
 }
