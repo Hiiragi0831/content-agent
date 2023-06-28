@@ -1,17 +1,13 @@
 .header {
-    top: vc(31);
-    width: 100%;
     position: absolute;
+    top: vc(31);
     z-index: 1;
-
-    @include devices {
-        margin-top: vc(15);
-    }
+    width: 100%;
 
     .container {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__logo {
@@ -48,10 +44,12 @@
     }
 
     @include devices {
+        top: vc(16);
+
         &__menu {
             width: vc(21);
             height: vc(15);
-            background-color: #26D52D;
+            background-color: #26d52d;
         }
     }
 }

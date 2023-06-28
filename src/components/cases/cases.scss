@@ -1,8 +1,4 @@
 .cases {
-    @include devices {
-        margin-top: vc(35);
-    }
-
     .container {
         display: flex;
         justify-content: space-between;
@@ -14,8 +10,8 @@
 
     &__case {
         .h2 {
-            width: vc(425);
             margin-right: vc(78);
+            width: vc(425);
 
             @include devices {
                 width: 100%;
@@ -23,71 +19,49 @@
         }
 
         img {
-            width: vc(130);
-            height: vc(198);
             position: absolute;
             left: vc(30);
+            width: vc(130);
+            height: vc(198);
         }
     }
 
     &__swipper {
-        width: vc(266);
-        height: vc(162);
-        display: flex;
         position: absolute;
+        left: vc(250);
+        top: vc(220);
+        display: flex;
         align-items: center;
         justify-content: center;
-        top: vc(125);
-        left: vc(220);
+        width: vc(195);
+        height: vc(83);
+        gap: vc(30);
 
-        &_icon1 {
+        &-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: vc(2) solid #f3c934;
+            border-radius: 100%;
             width: vc(83);
             height: vc(83);
             background: rgba(55, 39, 40, 0.6);
-            border: vc(2) solid #F3C934;
-            border-radius: 100%;
-            margin-right: vc(30);
 
             svg {
                 position: relative;
-                width: vc(68);
+                width: vc(50);
                 height: vc(50);
-                top: vc(15);
-                left: vc(5);
-            }
-        }
-
-        &_icon2 {
-            width: vc(83);
-            height: vc(83);
-            background: rgba(55, 39, 40, 0.6);
-            border: vc(2) solid #F3C934;
-            border-radius: 100%;
-
-            svg {
-                position: relative;
-                width: vc(68);
-                height: vc(50);
-                top: vc(15);
-                left: vc(5);
             }
         }
     }
 
     &__works {
         display: flex;
-        background: rgba(49, 35, 35, 0.6);
-        border: vc(3) solid #1D0B0B;
+        border: vc(3) solid #1d0b0b;
         border-radius: vc(20);
         padding: vc(20) vc(27) vc(35) vc(20);
-
-        @include devices {
-            border: none;
-            background: none;
-            padding: 0;
-            margin-top: vc(10);
-            gap: vc(17);
-        }
+        background: rgba(49, 35, 35, 0.6);
+        gap: vc(20);
 
         img {
             width: vc(191);
@@ -102,13 +76,7 @@
         &_work {
             display: flex;
             flex-direction: column;
-            margin-left: vc(21);
             gap: vc(11);
-
-            @include devices {
-                margin: 0;
-                gap: vc(10);
-            }
 
             h3 {
                 font-weight: 700;
@@ -130,28 +98,45 @@
                 color: $color-white;
 
                 @include devices {
-                    font-weight: 400;
-                    font-size: vc(10);
-                    line-height: vc(14);
                     overflow: hidden;
                     padding: 0;
                     max-height: vc(60);
+                    font-weight: 400;
+                    font-size: vc(10);
+                    line-height: vc(14);
                 }
             }
+
+            @include devices {
+                margin: 0;
+                gap: vc(10);
+            }
+        }
+
+        @include devices {
+            margin-top: vc(10);
+            border: none;
+            padding: 0;
+            background: none;
+            gap: vc(17);
         }
     }
 
     @include devices {
+        margin-top: vc(35);
+    }
+
+    @include devices {
         &__markers {
-            margin-top: vc(10);
             display: flex;
             justify-content: center;
+            margin-top: vc(10);
             gap: vc(10);
 
             &_marker {
+                border-radius: 100%;
                 width: vc(12);
                 height: vc(12);
-                border-radius: 100%;
                 background-color: $color-white;
             }
         }

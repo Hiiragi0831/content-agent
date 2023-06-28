@@ -10,7 +10,7 @@
     }
 
     @include devices {
-        --width-base: 375;
+        --width-base: 390;
         --width-current: 100vmin;
     }
 }
@@ -43,13 +43,12 @@ html {
 body {
     overflow-x: hidden;
     width: 100%;
-    background-color: #271C1C;
     -webkit-font-smoothing: antialiased;
     text-decoration-skip: objects;
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
-
+    background-color: #271c1c;
 
     &.is-resizing {
         opacity: 0;
@@ -60,6 +59,10 @@ body {
 main {
     flex: 1;
     padding-top: vc(113);
+
+    @include devices {
+        padding-top: vc(58);
+    }
 }
 
 h1,

@@ -1,4 +1,5 @@
 .services {
+    position: relative;
 
     .container {
         margin-bottom: vc(85);
@@ -12,10 +13,6 @@
         display: flex;
         justify-content: flex-start;
 
-        @include devices {
-            margin-top: vc(28);
-        }
-
         .h2 {
             width: vc(266);
 
@@ -25,84 +22,136 @@
         }
 
         img {
-            width: vc(191);
-            height: vc(191);
             position: absolute;
             left: vc(200);
             top: vc(-35);
+            width: vc(191);
+            height: vc(191);
+        }
+
+        @include devices {
+            margin-top: vc(28);
         }
     }
 
     &__list {
+        margin-top: vc(26);
         width: vc(324);
         height: vc(294);
-        margin-top: vc(26);
 
         ul {
-            background: rgba(49, 35, 35, 0.9);
-            border: vc(3) solid #1D0B0B;
+            border: vc(3) solid #1d0b0b;
             border-radius: vc(20);
             padding: vc(25) vc(78) vc(15) vc(25);
+            background: rgba(49, 35, 35, 0.9);
 
             li {
-                font-style: normal;
                 font-weight: 400;
+                font-style: normal;
                 font-size: vc(16);
                 color: $color-white;
-
+                transition: color $transition, text-decoration $transition;
 
                 &:not(:last-child) {
                     line-height: vc(35);
                 }
 
-                &:last-child {
-                    margin-top: vc(25);
+                &:hover {
+                    text-decoration: underline;
+                    color: $color-orange;
                 }
 
-                &:hover {
-                    text-decoration-line: underline;
-                    color: $color-orange;
-                    $transition-duration: 0.35s;
+                &:last-child {
+                    margin-top: vc(25);
                 }
             }
         }
     }
 
     &__icon {
-        width: vc(80);
-        height: vc(80);
-        border: vc(2) solid $color-orange;
-        border-radius: 100%;
         position: relative;
         left: vc(550);
+        border: vc(2) solid $color-orange;
+        border-radius: 100%;
+        width: vc(80);
+        height: vc(80);
 
         svg {
             position: relative;
+            top: vc(15);
             width: vc(76);
             height: vc(48);
-            top: vc(15);
         }
     }
 
     &__items {
-        margin-top: vc(10);
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: vc(10) vc(10);
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;
         grid-template-areas:
-        ". . ."
-        ". . .";
+            ". . ."
+            ". . .";
+        margin-top: vc(10);
+        gap: vc(10) vc(10);
 
         &_item {
-            background: rgba(49, 35, 35, 0.9);
-            border: vc(1) solid #1D0B0B;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: vc(1) solid #1d0b0b;
             border-radius: vc(10);
-            padding-top: vc(18);
-            color: $color-white;
-            text-align: center;
             width: vc(109);
             height: vc(54);
+            font-weight: 700;
+            text-align: center;
+            color: $color-white;
+            background: rgba(49, 35, 35, 0.9);
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        left: vc(394);
+        top: vc(40);
+        width: vc(533);
+
+        &-item {
+            position: absolute;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: vc(33);
+            text-align: center;
+            color: #fff;
+
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                background-image: none;
+                background-position: center;
+                opacity: 0;
+                transition: opacity $transition;
+            }
+
+            &--1 {
+                top: vc(38);
+                width: vc(151);
+                height: vc(116);
+
+                &::before {
+                    background-image: url("@images/services/bg-01.svg");
+                }
+
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
         }
     }
 }

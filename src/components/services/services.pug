@@ -26,10 +26,19 @@ mixin services()
             .services__icon.for-desktop
                     +svg("down-arrow")
             .services__items.for-devices
-                a(href="#").services__items_item Идея
-                a(href="#").services__items_item Видео
-                a(href="#").services__items_item Фото
-                a(href="#").services__items_item Аудио
-                a(href="#").services__items_item Текст
-                a(href="#").services__items_item Печатня
+                .services__items_item
+                    a(href="#") Идея
+                .services__items_item
+                    a(href="#") Видео
+                .services__items_item
+                    a(href="#") Фото
+                .services__items_item
+                    a(href="#") Аудио
+                .services__items_item
+                    a(href="#") Текст
+                .services__items_item
+                    a(href="#") Печатня
+            .services__menu
+                a.services__menu-item.services__menu-item--1(href="#")
+                    p Идея
 
