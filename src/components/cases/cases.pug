@@ -1,27 +1,40 @@
 mixin cases ()
     .cases
         .container
-            .cases__case
-                h2.h2 Наши кейсы
-                +picture({
-                    path: `${baseDir}assets/images/cases/image3`,
-                    ext: `png`,
-                }).for-desktop
-            .cases__swipper.for-desktop
-                .cases__swipper-arrow
-                    +svg("swiper-left-arrow")
-                .cases__swipper-arrow
-                    +svg("swiper-right-arrow")
-            .cases__works
-                +picture({
-                    path: `${baseDir}assets/images/cases/name-work`,
-                    ext: `png`,
-                })
-                .cases__works_work
-                    h3 Название работы
-                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            .cases__markers.for-devices
-                .cases__markers_marker
-                .cases__markers_marker
-                .cases__markers_marker
-                .cases__markers_marker
+            .cases__row
+                .cases__case
+                    h2.h2 Наши кейсы
+                    +picture({
+                        path: `${baseDir}assets/images/cases/image3`,
+                        ext: `png`,
+                    }).for-desktop
+                .cases__swipper.for-desktop
+                    .cases__swipper-arrow.cases__swipper-arrow--prev
+                        +svg("swiper-left-arrow")
+                    .cases__swipper-arrow.cases__swipper-arrow--next
+                        +svg("swiper-right-arrow")
+                .swiper
+                    .swiper-wrapper
+                        .swiper-slide
+                            .cases__works
+                                +picture({
+                                    path: `${baseDir}assets/images/cases/name-work`,
+                                    ext: `png`,
+                                })
+                                .cases__works_work
+                                    h3 Название работы
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        .swiper-slide
+                            .cases__works
+                                +picture({
+                                    path: `${baseDir}assets/images/cases/name-work`,
+                                    ext: `png`,
+                                })
+                                .cases__works_work
+                                    h3 Название работы
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                .cases__markers.for-devices
+                    .cases__markers_marker
+                    .cases__markers_marker
+                    .cases__markers_marker
+                    .cases__markers_marker

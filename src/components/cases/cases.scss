@@ -1,7 +1,8 @@
 .cases {
-    .container {
+    &__row {
         display: flex;
         justify-content: space-between;
+        gap: vc(78);
 
         @include devices {
             flex-direction: column;
@@ -9,20 +10,19 @@
     }
 
     &__case {
-        .h2 {
-            margin-right: vc(78);
-            width: vc(425);
-
-            @include devices {
-                width: 100%;
-            }
-        }
+        position: relative;
+        flex-shrink: 0;
+        width: vc(425);
 
         img {
             position: absolute;
             left: vc(30);
             width: vc(130);
             height: vc(198);
+        }
+
+        @include devices {
+            width: 100%;
         }
     }
 
@@ -46,6 +46,7 @@
             width: vc(83);
             height: vc(83);
             background: rgba(55, 39, 40, 0.6);
+            cursor: pointer;
 
             svg {
                 position: relative;
