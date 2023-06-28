@@ -133,23 +133,81 @@
                 height: 100%;
                 background-image: none;
                 background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
                 opacity: 0;
                 transition: opacity $transition;
             }
 
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+            }
+
             &--1 {
                 top: vc(38);
+                left: vc(2);
                 width: vc(151);
                 height: vc(116);
 
                 &::before {
                     background-image: url("@images/services/bg-01.svg");
                 }
+            }
 
-                &:hover {
-                    &::before {
-                        opacity: 1;
-                    }
+            &--2 {
+                left: vc(146);
+                top: vc(14);
+                width: vc(175);
+                height: vc(119);
+
+                &::before {
+                    background-image: url("@images/services/bg-02.svg");
+                }
+            }
+
+            &--3 {
+                left: vc(350);
+                top: vc(7);
+                width: vc(180);
+                height: vc(125);
+
+                &::before {
+                    background-image: url("@images/services/bg-03.svg");
+                }
+            }
+
+            &--4 {
+                left: vc(-20);
+                top: vc(168);
+                width: vc(180);
+                height: vc(130);
+
+                &::before {
+                    background-image: url("@images/services/bg-04.svg");
+                }
+            }
+
+            &--5 {
+                left: vc(163);
+                top: vc(168);
+                width: vc(176);
+                height: vc(126);
+
+                &::before {
+                    background-image: url("@images/services/bg-05.svg");
+                }
+            }
+
+            &--6 {
+                left: vc(343);
+                top: vc(159);
+                width: vc(180);
+                height: vc(139);
+
+                &::before {
+                    background-image: url("@images/services/bg-06.svg");
                 }
             }
         }
