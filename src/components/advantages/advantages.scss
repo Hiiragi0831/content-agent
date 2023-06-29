@@ -2,13 +2,10 @@
     display: flex;
     margin-top: vc(122);
 
-    @include devices {
-        margin-top: vc(40);
-    }
-
-    .container {
+    &__row {
         display: flex;
         justify-content: space-between;
+        gap: vc(70);
 
         @include devices {
             flex-direction: column;
@@ -26,26 +23,7 @@
         }
     }
 
-    &__icons {
-        display: flex;
-        gap: vc(40);
-        margin-left: vc(80);
-    }
-
     @include devices {
-        &__services {
-
-            &_service1 {
-                display: flex;
-                gap: vc(16);
-                margin-bottom: vc(30);
-            }
-
-            &_service2 {
-                display: flex;
-                justify-content: center;
-                gap: vc(58);
-            }
-        }
+        margin-top: vc(40);
     }
 }

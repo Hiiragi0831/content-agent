@@ -43,13 +43,22 @@
         gap: vc(40);
     }
 
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        width: vc(21);
+        height: vc(15);
+        gap: vc(3);
+
+        span {
+            border-radius: vc(3);
+            width: 100%;
+            height: vc(3);
+            background-color: $color-orange;
+        }
+    }
+
     @include devices {
         top: vc(16);
-
-        &__menu {
-            width: vc(21);
-            height: vc(15);
-            background-color: #26d52d;
-        }
     }
 }
