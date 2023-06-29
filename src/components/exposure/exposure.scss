@@ -2,17 +2,15 @@
     display: flex;
     flex-direction: column;
 
-    .container {}
-
     &__icon {
-        width: vc(42);
-        height: vc(42);
+        position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
         border: vc(1) solid $color-orange;
         border-radius: 100%;
-        position: absolute;
+        width: vc(42);
+        height: vc(42);
 
         svg {
             position: relative;
@@ -29,19 +27,18 @@
         p {
             font-weight: (300);
             font-size: vc(15);
-            color: #FFFFFF;
+            color: #fff;
             opacity: 0.6;
         }
 
         a {
             font-weight: (500);
             font-size: vc(18);
-            color: #FFFFFF;
-            transition: $transition;
+            color: #fff;
+            transition: color $transition;
 
             &:hover {
-                text-shadow: black vc(2) vc(2);
-
+                color: $color-orange;
             }
         }
     }

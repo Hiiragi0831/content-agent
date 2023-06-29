@@ -1,8 +1,19 @@
 mixin partners()
+    - let n = 0;
     .partners
         .container
             .partners__title
                 h2.h2 Наши партнеры
-            .partners__logos
-                +slider()
+            .partners__slider
+                .swiper
+                    .swiper-wrapper
+                        while n < 8
+                            .swiper-slide
+                                .partners__logo
+                                    +picture({
+                                        path: `${baseDir}assets/images/partners/logo`,
+                                        ext: `png`,
+                                        alt: n++
+                                    })
+                .partners__markers
 

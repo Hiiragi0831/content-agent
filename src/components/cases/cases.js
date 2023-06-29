@@ -7,6 +7,8 @@ const init = () => {
         spaceBetween: 30,
         pagination: {
             el: '.cases .cases__markers',
+            bulletClass: 'cases__marker',
+            bulletActiveClass: 'cases__marker-active'
         },
         navigation: {
             nextEl: '.cases .cases__swipper-arrow--next',

@@ -1,10 +1,6 @@
 .scholl {
     margin-top: vc(120);
 
-    @include devices {
-        margin-top: vc(30);
-    }
-
     .container {
         display: flex;
 
@@ -28,29 +24,112 @@
         display: flex;
         gap: vc(25);
 
-        @include  devices {
+        @include devices {
             flex-flow: wrap;
             justify-content: space-evenly;
             gap: vc(30) vc(19);
         }
     }
 
-    //@include devices {
-    //    &__services {
-    //        display: flex;
-    //        flex-wrap: wrap;
-    //
-    //        &_service1 {
-    //            //display: flex;
-    //            gap: vc(16);
-    //            margin-bottom: vc(30);
-    //        }
-    //
-    //        &_service2 {
-    //            //display: flex;
-    //            //justify-content: center;
-    //            gap: vc(58);
-    //        }
-    //    }
-    //}
+    &__icons {
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: vc(161);
+            height: vc(185);
+            gap: vc(10);
+
+            &:hover {
+                .scholl__icons-icon {
+                    background-color: rgba($color-black, 0.5);
+                }
+            }
+
+            @include devices {
+                width: vc(102);
+                height: vc(148);
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: vc(2) solid $color-orange;
+            border-radius: 100%;
+            width: vc(127);
+            height: vc(127);
+            background-color: rgba(55, 39, 40, 0.6);
+            transition: background-color $transition;
+
+            svg {
+                width: vc(65);
+                height: vc(65);
+
+                @include devices {
+                    width: vc(48);
+                    height: vc(48);
+                }
+            }
+
+            @include devices {
+                width: vc(101);
+                height: vc(101);
+            }
+        }
+
+        &-title {
+            position: relative;
+            left: vc(44);
+            border: vc(1) dashed $color-orange;
+            border-radius: 100%;
+            padding-top: vc(8);
+            width: vc(36);
+            height: vc(36);
+            background: rgba(55, 39, 40, 1);
+
+            p {
+                font-weight: 800;
+                font-size: vc(13);
+                line-height: vc(16);
+                text-align: center;
+                color: $color-orange;
+            }
+
+            @include devices {
+                left: vc(32);
+            }
+        }
+
+        &-text {
+            position: relative;
+            top: vc(90);
+            max-width: vc(161);
+
+
+            p {
+                font-weight: 400;
+                font-size: vc(20);
+                line-height: vc(23);
+                text-align: center;
+                color: $color-white;
+
+                @include devices {
+                    font-size: vc(14);
+                    line-height: vc(16);
+                }
+            }
+
+            @include devices {
+                top: vc(70);
+                max-width: vc(117);
+            }
+        }
+    }
+
+    @include devices {
+        margin-top: vc(30);
+    }
 }

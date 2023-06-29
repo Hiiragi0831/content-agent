@@ -11,7 +11,8 @@ import uaParser from '@scripts/modules/ua-parser';
 import vhFix from '@scripts/modules/vh-fix';
 
 import { isDevices } from '@scripts/helpers/index';
-import casesSwipper from "../components/cases/cases-swipper";
+import cases from "../components/cases/cases";
+import partners from "../components/partners/partners";
 
 window._debounce = debounce;
 window._throttle = throttle;
@@ -38,7 +39,8 @@ const init = () => {
     actualYear.init();
     vhFix.init();
     lazyLoad.init();
-    casesSwipper.init();
+    cases.init();
+    partners.init();
 
     resizeWidth = innerWidth;
 

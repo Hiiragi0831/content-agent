@@ -6,6 +6,7 @@
 
         @include devices {
             flex-direction: column;
+            gap: vc(10);
         }
     }
 
@@ -46,6 +47,7 @@
             width: vc(83);
             height: vc(83);
             background: rgba(55, 39, 40, 0.6);
+            transition: opacity $transition;
             cursor: pointer;
 
             svg {
@@ -53,11 +55,16 @@
                 width: vc(50);
                 height: vc(50);
             }
+
+            &.swiper-button-disabled {
+                opacity: 0.7;
+            }
         }
     }
 
     &__works {
         display: flex;
+        align-items: center;
         border: vc(3) solid #1d0b0b;
         border-radius: vc(20);
         padding: vc(20) vc(27) vc(35) vc(20);
@@ -99,9 +106,6 @@
                 color: $color-white;
 
                 @include devices {
-                    overflow: hidden;
-                    padding: 0;
-                    max-height: vc(60);
                     font-weight: 400;
                     font-size: vc(10);
                     line-height: vc(14);
@@ -115,7 +119,6 @@
         }
 
         @include devices {
-            margin-top: vc(10);
             border: none;
             padding: 0;
             background: none;
@@ -123,23 +126,28 @@
         }
     }
 
-    @include devices {
-        margin-top: vc(35);
+    .swiper {
+        width: 100%;
+    }
+
+    &__markers {
+        display: flex;
+        justify-content: center;
+        gap: vc(10);
+    }
+
+    &__marker {
+        border-radius: 100%;
+        width: vc(12);
+        height: vc(12);
+        background-color: $color-white;
+
+        &-active {
+            background-color: $color-orange;
+        }
     }
 
     @include devices {
-        &__markers {
-            display: flex;
-            justify-content: center;
-            margin-top: vc(10);
-            gap: vc(10);
-
-            &_marker {
-                border-radius: 100%;
-                width: vc(12);
-                height: vc(12);
-                background-color: $color-white;
-            }
-        }
+        margin-top: vc(35);
     }
 }
