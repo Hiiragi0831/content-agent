@@ -1,5 +1,5 @@
 .category-page {
-    &:before {
-        background-image: url("@images/pages/bg-category.jpg");
+    &::before {
+        background-image: url("@images/bg/bg-category.jpg");
     }
 }
