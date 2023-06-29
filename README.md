@@ -1,69 +1,359 @@
 # Информация о проекте
 
-Репа: undefined
+Тест: добавляется ссылка на тест
 
-Тест: undefined
+Прод: добавляется ссылка на боевой сайт
 
-Прод: undefined
+# Содержание
+
+1. [Работа со сборкой](#работа-со-сборкой)
+	1. [Запуск сервера для разработки](#запуск-сервера-для-разработки)
+	2. [Создание билда](#создание-билда)
+	3. [Создание билда для прода](#создание-билда-для-прода)
+	4. [Линтинг кода](#линтинг-кода)
+	6. [Автоматическое создание компонента](#автоматическое-создание-компонента)
+	7. [Автоматическое создание страницы](#автоматическое-создание-страницы)
+	8. [Конвертация шрифтов](#конвертация-шрифтов)
+	9. [Конвертация картинок в формат ``webp`` или ``avif``](#конвертация-картинок-в-формат-webp-или-avif)
+	10. [Сжатие картинок ``(png, jpg, gif, webp, avif)``](#сжатие-картинок-png-jpg-gif-webp-avif)
+	11. [Архивирование папки ``build``](#архивирование-папки-build)
+
+2. [Работа с проектом](#работа-с-проектом)
+	1. [Добавление метатегов](#добавление-метатегов)
+	2. [Работа с роутером](#работа-с-роутером)
+	3. [Аналитика](#аналитика)
+	4. [Компоненты](#компоненты)
+		1. [header](#header)
+		2. [footer](#footer)
+		3. [sharing](#sharing)
+		4. [scrollToAnchor](#scrolltoanchor)
+		5. [lazyLoad](#lazyload)
+		6. [lazyBlur](#lazyblur)
+		7. [Swiper slider](#slider)
+		8. [videoJs](#videojs)
+		9. [dropdown](#dropdown)
+		10. [tabs](#tabs)
+		11. [popup](#popup)
+		12. [form](#form)
+
+3. [Основные моменты и их возможные исправления](#основные-моменты-и-их-возможные-исправления)
+	1. [Ошибки линтера PUG](ошибки-линтера-pug)
+	2. [Линтер Style](#линтер-style)
+	3. [Настройка stylelint для VC Code](#настройка-stylelint-для-vc-code)
+	4. [Отмена минификации файла HTML после сборки билда](#отмена-минификации-файла-html-после-сборки-билда)
 
 # Работа со сборкой
 
-1. Запуск сервера для разработки - ``npm run start``.
+за основу взята сборка: [ninelines-template](https://gitlab.linestest.com/ninelines/ninelines-template)
 
-2. Создание билда - ``npm run build``.
+## Старт и Сборка
 
-3. Создание билда для прода - ``npm run build:prod``.
+### Запуск сервера для разработки
 
-4. Линтинг кода:
+```bash
+npm run start
+```
 
-    4.1. Все сразу - ``npm run lint``;
+### Создание билда
 
-    4.2. Скрипты - ``npm run lint:scripts``;
+```bash
+npm run build
+```
 
-    4.3. Стили - ``npm run lint:styles``;
+### Создание билда для прода
 
-    4.4. Разметка - ``npm run lint:pug``.
+```bash
+npm run build:prod
+```
 
-5. Автоматическое создание файлов для компонентов и страниц:
+## Линтинг кода
 
-    5.1. Компонент - ``npm run create-files <НАЗВАНИЕ ПАПКИ>``. Например: ``npm run create-files header`` - создаст папку ``header`` внутри папки ``src/components``, содержащую следующий список файлов и подпапок: ``images (папка), data.js, header.js, header.pug, header.scss``;
+#### Все сразу
 
-    5.2. Страница - ``npm run create-files <НАЗВАНИЕ ПАПКИ> --page``. Например: ``npm run create-files home --page`` - создаст папку ``home`` внутри папки ``src/pages``, с аналогичной созданию компонента структурой.
+```bash
+npm run lint
+```
 
-6. Конвертация шрифтов ``(ttf, otf, svg)`` в форматы ``woff`` и ``woff2`` - ``npm run fonts:convert``. Берет шрифты из папки ``src/assets/fonts`` и преобразует их в указанные выше форматы, с сохранением структуры и исходных форматов.
+#### Скрипты
 
-7. Конвертация картинок в формат ``webp`` или ``avif``. По умолчанию берет картинки из папок ``src/assets/images``, ``src/components`` и ``src/pages`` и преобразует их в формат ``webp`` с качеством ``90%``:
+```bash
+npm run lint:scripts
+```
 
-    7.1. WebP - ``npm run images:convert``;
+#### Стили
 
-    7.2. AVIF - ``npm run images:convert avif``;
+```bash
+npm run lint:styles
+```
 
-    7.3. С указанием качества - ``npm run images:convert quality=70``, по умолчанию - ``90`` (в процентах);
+#### Разметка
 
-    7.4. С указанием папки - ``npm run images:convert only=assets`` (только картинки из папки ``src/assets/images``), ``npm run images:convert only=components`` (только картинки из папки ``src/components``), ``npm run images:convert only=pages`` (только картинки из папки ``src/pages``);
+```bash
+npm run lint:pug
+```
 
-    7.5. С указанием необходимого пути - ``npm run images:convert path=<ПУТЬ К ПАПКЕ>``. Например - ``npm run images:convert path=src/pages/home/images/background``;
+## Вспомогательные команды
 
-    7.6. Сочетание параметров (пример) - ``npm run images:convert only=pages avif quality=50``.
+### Автоматическое создание компонента
 
-8. Сжатие картинок ``(png, jpg, gif, webp, avif)``:
+```bash
+npm run create-files <НАЗВАНИЕ ПАПКИ>
+```
 
-    8.1. Сжатие картинок из папок ``src/assets/images``, ``src/components`` и ``src/pages`` - ``npm run images:compress``
+Компонент - ``npm run create-files <НАЗВАНИЕ ПАПКИ>``. Например: ``npm run create-files header`` - создаст папку ``header`` внутри папки ``src/components``, содержащую следующий список файлов и подпапок: ``images (папка), data.js, header.js, header.pug, header.scss``
 
-    8.2. С указанием качества - ``npm run images:compress quality=80``, по умолчанию - ``75`` (в процентах);
+### Автоматическое создание страницы
 
-    8.3. С указанием папки - ``npm run images:compress only=assets`` (только картинки из папки ``src/assets/images``), ``npm run images:compress only=components`` (только картинки из папки ``src/components``), ``npm run images:compress only=pages`` (только картинки из папки ``src/pages``);
+```bash
+npm run create-files <НАЗВАНИЕ ПАПКИ> page
+```
 
-    8.4. С указанием необходимого пути - ``npm run images:compress path=<ПУТЬ К ПАПКЕ>``. Например - ``npm run images:compress path=src/components/header/burger``;
+Страница - ``npm run create-files <НАЗВАНИЕ ПАПКИ> page``. Например: ``npm run create-files home page`` - создаст папку ``home`` внутри папки ``src/pages``, с аналогичной созданию компонента структурой
 
-    8.5. Сочетание параметров (пример) - ``npm run images:compress only=assets avif quality=65``.
+### Конвертация шрифтов
 
-9. Архивирование папки ``build`` - ``npm run zip``. Создаст архив ``build.zip`` в корневой папке проекта:
+```bash
+npm run fonts:convert
+```
 
-    9.1. Добавление версии - ``npm run zip v=<ВЕРСИЯ>``. Например: ``npm run zip v=14`` - создаст архив ``build-v14.zip``;
+Конвертация шрифтов ``npm run fonts:convert`` - ``(ttf, otf, svg)`` в форматы ``woff`` и ``woff2``. Берет шрифты из папки ``src/assets/fonts`` и преобразует их в указанные выше форматы, с сохранением структуры и исходных форматов
 
-    9.2. Указание имени - ``npm run zip name=<ИМЯ>``. Например: ``npm run zip name=build_19022022`` - создаст архив с именем ``build_19022022.zip``.
+## Конвертация картинок в формат ``webp`` или ``avif``
 
-10. Удаление папки ``build`` - ``npm run clean``.
+Конвертация картинок в формат ``webp`` или ``avif``. По умолчанию берет картинки из папок ``src/assets/images``, ``src/components`` и ``src/pages`` и преобразует их в формат ``webp`` с качеством ``90%``
 
-11. Автоматическое удаление файлов из билда для продакшн версии. По умолчанию будет удаляться файл ``robots.txt`` из папки ``build``. Отменить удаление данного файла или добавить другие можно изменяя массив свойства ``build.remove`` внутри файла ``config.js``. Например хотим добавить удаление ``.htaccess`` - ``remove: ['robots.txt'. '.htaccess']``. Или ничего не будем удалять - ``remove: []``. Данное правило будет работать только при условии, что метод ``html.isProd`` будет возвращать ``true``, т.е. только когда собираем сборку командой ``npm run build:prod`` или если поменять его вручную.
+### WebP
+
+```bash
+npm run images:convert
+```
+
+### AVIF
+
+```bash
+npm run images:convert avif
+```
+
+### С указанием качества (по умолчанию - ``90`` (в процентах))
+
+```bash
+npm run images:convert quality=70
+```
+
+### С указанием папки
+
+```bash
+npm run images:convert only=<НАЗВАНИЕ ПАПКИ>
+```
+
+С указанием папки - ``npm run images:convert only=assets`` (только картинки из папки ``src/assets/images``), ``npm run images:convert only=components`` (только картинки из папки ``src/components``), ``npm run images:convert only=pages`` (только картинки из папки ``src/pages``)
+
+### С указанием необходимого пути
+
+```bash
+npm run images:convert path=<ПУТЬ К ПАПКЕ>
+```
+
+Например - ``npm run images:convert path=src/pages/home/images/background``
+
+### Сочетание параметров (пример)
+
+```bash
+npm run images:convert only=pages avif quality=50
+```
+
+## Сжатие картинок ``(png, jpg, gif, webp, avif)``
+
+### Сжатие картинок из папок ``src/assets/images``, ``src/components`` и ``src/pages``
+
+```bash
+npm run images:compress
+```
+
+### С указанием качества, по умолчанию - ``75`` (в процентах)
+
+```bash
+npm run images:compress quality=80
+```
+
+### С указанием папки
+
+```bash
+npm run images:compress only=<НАЗВАНИЕ ПАПКИ>
+```
+
+С указанием папки - ``npm run images:compress only=assets`` (только картинки из папки ``src/assets/images``), ``npm run images:compress only=components`` (только картинки из папки ``src/components``), ``npm run images:compress only=pages`` (только картинки из папки ``src/pages``)
+
+### С указанием необходимого пути
+
+```bash
+npm run images:compress path=<ПУТЬ К ПАПКЕ>
+```
+
+Например - ``npm run images:compress path=src/components/header/burger``
+
+### Сочетание параметров (пример)
+
+```bash
+npm run images:compress only=assets avif quality=65
+```
+
+## Архивирование папки ``build``
+
+```bash
+npm run zip
+```
+
+Создаст архив ``build.zip`` в корневой папке проекта
+
+```bash
+npm run zip v=<ВЕРСИЯ>
+```
+
+Например: ``npm run zip v=14`` - создаст архив ``build-v14.zip``
+
+```bash
+npm run zip name=<ИМЯ>
+```
+
+Например: ``npm run zip name=build_19022022`` - создаст архив с именем ``build_19022022.zip``
+
+```bash
+npm run clean
+```
+Удаление папки ``build``
+
+---
+
+Автоматическое удаление файлов из билда для продакшн версии. По умолчанию будет удаляться файл ``robots.txt`` из папки ``build``. Отменить удаление данного файла или добавить другие можно изменяя массив свойства ``build.remove`` внутри файла ``config.js``. Например хотим добавить удаление ``.htaccess`` - ``remove: ['robots.txt'. '.htaccess']``. Или ничего не будем удалять - ``remove: []``. Данное правило будет работать только при условии, что метод ``html.isProd`` будет возвращать ``true``, т.е. только когда собираем сборку командой ``npm run build:prod`` или если поменять его вручную
+
+# Работа с проектом
+
+## Добавление метатегов
+
+Мета теги ``Title``, ``Description``, ``image`` и т.д.  указываются в ``src/data/data.js`` в объекте с ключом страницы (есть пример для 2х страниц).
+
+```javascript
+import general from 'general';
+
+const data = {
+	general,
+	home: {
+		meta: {
+			title: 'page home',
+			description: 'home description',
+			image: `${general.baseDir}image/share/share.jpg`,
+			keywords: []
+		}
+	},
+	article: {
+		meta: {
+			title: 'page article',
+			description: 'article description',
+			image: `${general.baseDir}image/share/share.jpg`,
+			keywords: []
+		}
+	}
+};
+
+export default data;
+```
+
+## Работа с роутером
+
+Для перехода (без перезагрузки старницы) и анимации используется [Barba JS](https://barba.js.org/).
+В ``main.js`` подключен ``router``, а страницы оборачиваются в миксин ``router``, если это не требуется нужно удалить router из кода.
+
+## Аналитика
+
+Компонент счетчиков аналитики (``src/components/analytics/analytics.pug``) подключаются в ``head`` в файле ``base.pug``. Сами счетчики предоставляются отделом аналитики и подключаются в файл ``analytics.pug``, а события настраиваются в файле ``analytics.js``
+
+## Компоненты
+
+### header
+
+описание в процессе...
+
+### footer
+
+описание в процессе...
+
+### sharing
+
+описание в процессе...
+
+### scrollToAnchor
+
+описание в процессе...
+
+### lazyLoad
+
+описание в процессе...
+
+### lazyBlur
+
+описание в процессе...
+
+### Swiper slider
+
+будет позже
+
+### videoJs
+
+будет позже
+
+### dropdown
+
+будет позже
+
+### tabs
+
+будет позже
+
+### popup
+
+будет позже
+
+### form
+
+будет позже
+
+# Основные моменты и их возможные исправления
+
+Для работы настроек проекта из .editorconfig, может потребоваться расширение [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) (для других редакторов пока нет возможности проверить)
+
+## Ошибки линтера PUG
+
+```bash
+Invalid line break
+```
+Если во время проверки линтера при коммите выходит ошибка ``Invalid line break``, а файл был сохранен в правильном формате (LF), то скорее всего git при проверки автоматически конвертирует файлы в СRLF. Чтобы исправить данное поведение воспользуйтесь командой
+
+```bash
+git config --global core.autocrlf false
+```
+
+## Линтер Style
+В файле ``.stylelintrc`` есть правило ``"order/properties-order"``, который отвечает за правильную последовательность свойств в стилях. Старайтесь придерживаться этого правила с самого начала, частые коммиты помогут выявлять ошибки в малых количествах, нежели править сотни ошибок перед пушем в конце дня. Со временем выработается привычка писать сразу правильно
+
+## Настройка stylelint для VC Code
+1. Установите расширение [stylelint](https://stylelint.io/)
+2. Переходим в ``extention settings`` и находим раздел ``Stylelint: Config``
+3. В данном разделе переходим по кнопке ``Edit in settings.json`` и в строчке ``"stylelint.config"`` указываем ``null`` (``"stylelint.config": null,``)
+
+Теперь все ошибки линтера будут отображаться во время работы, что сократит время на правки во время коммита. Правила линтера тянутся из файла `.stylelintrc` для проекта.
+
+## Отмена минификации файла HTML после сборки билда
+1. Устанавливаем плагин https://www.npmjs.com/package/beautify-html-webpack-plugin
+2. В корне проекта находим файл ``config/common.js``
+3. Подключаем плагин
+	```javascript
+	import BeautifyHtmlWebpackPlugin from 'beautify-html-webpack-plugin';
+	```
+4. И добавляем его в код после строки ``...plugins.HtmlPages()``. Вместо ``options`` добавляем правила стилизации
+	```javascript
+	plugins.Dashboard,
+    ...plugins.HtmlPages(),
+	new BeautifyHtmlWebpackPlugin(options),
+    plugins.RemoveFiles,
+	```

@@ -8,7 +8,7 @@ const consoleColors = {
     redText: '\x1b[31m',
     redBg: '\x1b[41m',
 };
-const isPage = process.argv.includes('--page');
+const isPage = process.argv.includes('page');
 
 function createFiles() {
     if (!process.argv[2]) {
@@ -45,8 +45,8 @@ function createFiles() {
         console.log(`${consoleColors.greenBg}Файл ${requestedPage}.scss - создан${consoleColors.reset}`)
     );
 
-    fs.writeFile(path.join(requestedPath, `/${requestedPage}.pug`), '', () =>
-        console.log(`${consoleColors.greenBg}Файл ${requestedPage}.pug - создан${consoleColors.reset}`)
+    fs.writeFile(path.join(requestedPath, `/${isPage ? 'index' : requestedPage}.pug`), '', () =>
+        console.log(`${consoleColors.greenBg}Файл ${isPage ? 'index' : requestedPage}.pug - создан${consoleColors.reset}`)
     );
 }
 

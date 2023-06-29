@@ -14,7 +14,7 @@ const glob = require('glob');
 const { convertFont } = require('@hayes0724/web-font-converter');
 
 const cwd = process.cwd();
-const fontsPath = path.resolve(cwd, 'src', 'assets', 'fonts');
+const fontsPath = './src/assets/fonts';
 const fontsDone = [];
 
 console.log(' ');

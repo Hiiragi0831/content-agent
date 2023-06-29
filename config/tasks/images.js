@@ -13,9 +13,9 @@ const sharp = require('sharp');
 const cwd = process.cwd();
 const args = process.argv;
 
-const imagesAssetsPath = path.resolve(cwd, 'src', 'assets', 'images');
-const imagesComponentsPath = path.resolve(cwd, 'src', 'components');
-const imagesPagesPath = path.resolve(cwd, 'src', 'pages');
+const imagesAssetsPath = './src/assets/images';
+const imagesComponentsPath = './src/components';
+const imagesPagesPath = './src/pages';
 
 let imagesCustomPath = null;
 let imagesExts = 'png,jpg,jpeg,gif,avif';

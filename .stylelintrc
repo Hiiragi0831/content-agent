@@ -588,7 +588,7 @@
         "function-url-scheme-allowed-list": null,
         "function-allowed-list": null,
         "function-whitespace-after": "always",
-        "indentation": 4,
+        "indentation": "tab",
         "keyframe-declaration-no-important": true,
         "length-zero-no-unit": true,
         "max-empty-lines": 1,
