@@ -10,41 +10,43 @@ import lazyLoad from '@scripts/modules/lazy-load';
 import uaParser from '@scripts/modules/ua-parser';
 import vhFix from '@scripts/modules/vh-fix';
 
-import { isDevices } from '@scripts/helpers/index';
-import cases from "../components/cases/cases";
-import partners from "../components/partners/partners";
+import {isDevices} from '@scripts/helpers/index';
+import cases from '../components/cases/cases';
+import partners from '../components/partners/partners';
 
+// eslint-disable-next-line no-underscore-dangle
 window._debounce = debounce;
+// eslint-disable-next-line no-underscore-dangle
 window._throttle = throttle;
 
 let resizeWidth = null;
 
 const resize = () => {
-    if (isDevices() && resizeWidth && resizeWidth === innerWidth) {
-        return;
-    }
+	if (isDevices() && resizeWidth && resizeWidth === innerWidth) {
+		return;
+	}
 
-    document.body.classList.add('is-resizing');
+	document.body.classList.add('is-resizing');
 
-    uaParser.resize();
-    // resize logic
+	uaParser.resize();
+	// resize logic
 
-    document.body.classList.remove('is-resizing');
+	document.body.classList.remove('is-resizing');
 
-    resizeWidth = innerWidth;
+	resizeWidth = innerWidth;
 };
 
 const init = () => {
-    uaParser.init();
-    actualYear.init();
-    vhFix.init();
-    lazyLoad.init();
-    cases.init();
-    partners.init();
+	uaParser.init();
+	actualYear.init();
+	vhFix.init();
+	lazyLoad.init();
+	cases.init();
+	partners.init();
 
-    resizeWidth = innerWidth;
+	resizeWidth = innerWidth;
 
-    window.addEventListener('resize', _debounce(resize, 500));
+	window.addEventListener('resize', _debounce(resize, 500));
 };
 
 init();
