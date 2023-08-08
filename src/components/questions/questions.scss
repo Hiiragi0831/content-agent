@@ -1,222 +1,146 @@
 .questions {
+	.container {
+		margin-top: vc(100);
+		border: vc(3) solid #1d0b0b;
+		border-radius: vc(20);
+		background: rgba(49, 35, 35, 0.6);
 
-    .container {
-        margin-top: vc(100);
-        background: rgba(49, 35, 35, 0.6);
-        border: vc(3) solid #1D0B0B;
-        border-radius: vc(20);
+		@include devices {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: vc(40);
+			max-width: vc(360);
+		}
+	}
 
-        @include devices {
-            margin-top: vc(40);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            max-width: vc(360);
-        }
-    }
+	&__title {
+		margin-top: vc(60);
 
-    &__title {
-        margin-top: vc(60);
+		h2 {
+			font-weight: 500;
+			font-size: vc(36);
+			text-align: center;
+			color: $color-white;
 
-        @include devices {
-            margin-top: vc(40);
-        }
+			@include devices {
+				width: 100%;
+				font-size: vc(20);
+			}
+		}
 
-        .h2 {
-            text-align: center;
+		@include devices {
+			margin-top: vc(40);
+		}
+	}
 
-            @include devices {
-                width: 100%;
-            }
-        }
-    }
+	&__feelds {
+		display: flex;
+		justify-content: center;
+		margin-top: vc(32);
+		gap: vc(20);
 
-    &__feelds {
-        margin-top: vc(32);
-        justify-content: center;
-        gap: vc(20);
-        display: flex;
+		input {
+			border: none;
+			border-radius: vc(90);
+			padding: vc(16) vc(30);
+			width: vc(265);
+			height: vc(50);
+			font-family: $font-primary;
+			font-weight: 400;
+			font-size: vc(14);
+			line-height: vc(16);
+			color: #09091c;
+			background: $color-white;
 
-        @include devices {
-            flex-direction: column;
-            margin-top: vc(30);
-        }
+			&::placeholder {
+				color: #09091c;
+			}
 
-        &_name {
-            input {
-                width: vc(265);
-                height: vc(50);
-                background: $color-white;
-                border-radius: vc(90);
+			@include devices {
+				width: vc(292);
+			}
+		}
 
-                @include devices {
-                    width: vc(292);
-                }
+		&_send {
+			.button {
+				display: flex;
+				border-radius: vc(90);
+				padding: vc(15) vc(91) vc(16) vc(91);
+				font-weight: 700;
+				font-size: vc(16);
+				line-height: vc(19);
+				text-align: center;
 
-                &::placeholder {
-                    font-weight: 400;
-                    font-size: vc(14);
-                    line-height: vc(16);
-                    color: #09091C;
-                    text-align: center;
+				&__primary {
+					color: $color-black;
+					background: $color-orange;
+				}
 
-                    @include devices {
-                        text-align: left;
-                        padding-left: vc(25);
-                    }
-                }
-            }
-        }
+				@include devices {
+					padding: vc(15) vc(104);
+				}
+			}
+		}
 
-        &_namber {
-            input {
-                width: vc(265);
-                height: vc(50);
-                background: $color-white;
-                border-radius: vc(90);
+		@include devices {
+			flex-direction: column;
+			margin-top: vc(30);
+		}
+	}
 
-                @include devices {
-                    width: vc(292);
-                }
+	&__social {
+		display: flex;
+		justify-content: center;
+		margin-top: vc(30);
+		margin-bottom: vc(59);
+		gap: vc(49);
 
-                &::placeholder {
-                    font-weight: 400;
-                    font-size: vc(14);
-                    line-height: vc(16);
-                    color: #09091C;
-                    text-align: center;
+		&-item {
+			display: flex;
+			align-items: center;
+			font-weight: 400;
+			font-size: vc(20);
+			line-height: vc(23);
+			color: $color-white;
 
-                    @include devices {
-                        text-align: left;
-                        padding-left: vc(25);
-                    }
-                }
-            }
-        }
+			a {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 
-        &_send {
-            .button {
-                display: flex;
-                border-radius: vc(90);
-                font-weight: 700;
-                font-size: vc(16);
-                line-height: vc(19);
-                text-align: center;
-                padding: vc(15) vc(91) vc(16) vc(91);
+			svg {
+				flex-shrink: 0;
+				margin-right: vc(20);
+				width: vc(24);
+				height: vc(24);
 
-                @include devices {
-                    padding: vc(15) vc(104);
-                }
+				@include devices {
+					margin-right: vc(10);
+					width: vc(32);
+					height: vc(32);
+				}
+			}
 
-                &__primary {
-                    background: $color-orange;
-                    color: $color-black;
-                }
-            }
-        }
-    }
+			&.whatsapp {
+				color: #26d52d;
+			}
 
-    &__social {
-        display: flex;
-        justify-content: center;
-        gap: vc(49);
-        margin-top: vc(30);
-        margin-bottom: vc(59);
+			@include devices {
+				align-items: center;
+				max-width: vc(212);
+				font-size: vc(13);
+				line-height: 1;
+			}
+		}
 
-        @include devices {
-            flex-direction: column;
-            margin-top: vc(20);
-            margin-bottom: vc(40);
-            gap: vc(12);
-        }
-
-        &_pfone {
-            display: flex;
-
-            @include devices {
-                max-width: vc(212);
-                align-items: center;
-            }
-
-            svg {
-                width: vc(24);
-                height: vc(24);
-                margin-right: vc(20);
-
-                @include devices {
-                    width: vc(56);
-                    height: vc(32);
-                    margin-right: vc(10);
-                }
-            }
-
-            p {
-                font-weight: 400;
-                font-size: vc(20);
-                line-height: vc(23);
-                color: $color-white;
-                margin-right: vc(7);
-
-                @include devices {
-                    font-size: vc(13);
-                    line-height: vc(15);
-                    margin: 0;
-                }
-            }
-
-            a {
-                font-weight: 400;
-                font-size: vc(20);
-                line-height: vc(23);
-                color: $color-white;
-                transition: $transition;
-
-                @include devices {
-                    font-size: vc(13);
-                    line-height: vc(15);
-                }
-
-                &:hover {
-                text-decoration: underline;
-                }
-            }
-        }
-
-        &_watsup {
-            display: flex;
-
-            @include devices {
-                align-items: center;
-            }
-
-            svg {
-                width: vc(24);
-                height: vc(24);
-                margin-right: vc(10);
-
-                @include devices {
-                    width: vc(32);
-                    height: vc(32);
-                }
-            }
-
-            a {
-                font-weight: 400;
-                font-size: vc(16);
-                line-height: vc(19);
-                color: #26D52D;
-                transition: $transition;
-
-                @include devices {
-                    font-size: vc(13);
-                    line-height: vc(15);
-                }
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
+		@include devices {
+			flex-direction: column;
+			margin-top: vc(20);
+			margin-bottom: vc(40);
+			gap: vc(12);
+		}
+	}
 }

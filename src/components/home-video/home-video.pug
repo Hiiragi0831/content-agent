@@ -1,47 +1,47 @@
 mixin home-video()
-    .home-video
-        .container
-            .home-video__img
-                h2.h2.for-devices Семейные видео
-                .home-video__img_main
-                    +picture({
-                        path: `${baseDir}assets/images/famyli-videos/famyli-videos`,
-                        ext: `png`,
-                    })
-                .home-video__img_secondary
-                    +picture({
-                        path: `${baseDir}assets/images/home-video/home-one`,
-                        ext: `png`,
-                    })
-                    +picture({
-                        path: `${baseDir}assets/images/home-video/home2`,
-                        ext: `png`,
-                    })
-                    +picture({
-                        path: `${baseDir}assets/images/home-video/home3`,
-                        ext: `png`,
-                    })
-            .home-video__title
-                h2.h2.for-desktop Семейные видео
-                .home-video__title_abilities
-                    .home-video__title_abilities-price
-                        p Стоимость услуги:
-                        h3 1 500 Р
-                    .home-video__title_abilities-data
-                        p Время выполнения:
-                        h3 2 дня
-                .home-video__title_description
-                        h3 Описание:
-                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                .home-video__title_payment
-                    .home-video__title_payment-way
-                        p Способо оплаты:
-                        +picture({
-                            path: `${baseDir}assets/images/home-video/way`,
-                            ext: `png`,
-                        })
-                    .home-video__title_payment-order
-                        +button("Заказать услугу", "#")
+	.home-video
+		.container
+			.home-video__img
+				h2.h2.for-devices Семейные видео
+				.home-video__img_main
+					+picture({
+						path: `${baseDir}assets/images/famyli-videos/famyli-videos`,
+						ext: `png`,
+					})
+				.home-video__img_secondary
+					+picture({
+						path: `${baseDir}assets/images/home-video/home-one`,
+						ext: `png`,
+					})
+					+picture({
+						path: `${baseDir}assets/images/home-video/home2`,
+						ext: `png`,
+					})
+					+picture({
+						path: `${baseDir}assets/images/home-video/home3`,
+						ext: `png`,
+					})
+			.home-video__title
+				h2.h2.for-desktop Семейные видео
+				.home-video__title_abilities
+					.home-video__title_abilities-price
+						p Стоимость услуги:
+						h3 1 500 Р
+					.home-video__title_abilities-data
+						p Время выполнения:
+						h3 2 дня
+				.home-video__title_description
+					h3 Описание:
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				.home-video__title_payment
+					.home-video__title_payment-way
+						p Способо оплаты:
+						.home-video__title_payment-logos
+							+svg("visa")
+							+svg("mastercard")
+							+svg("mir")
+					.home-video__title_payment-order
+						+button("Заказать услугу", "#")
 
 
 
