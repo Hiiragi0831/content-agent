@@ -1,11 +1,11 @@
 .h2 {
-    font-weight: 700;
-    font-size: vc(48);
-    line-height: vc(58);
-    color: $color-white;
+	font-weight: 700;
+	font-size: vc(48);
+	line-height: vc(58);
+	color: $color-white;
 
-    @include devices {
-        font-size: vc(20);
-        line-height: vc(24);
-    }
+	@include devices {
+		font-size: vc(20);
+		line-height: vc(24);
+	}
 }

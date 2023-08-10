@@ -13,6 +13,7 @@ import vhFix from '@scripts/modules/vh-fix';
 import {isDevices} from '@scripts/helpers/index';
 import cases from '../components/cases/cases';
 import partners from '../components/partners/partners';
+import reviews from "../components/reviews/reviews";
 
 // eslint-disable-next-line no-underscore-dangle
 window._debounce = debounce;
@@ -43,6 +44,7 @@ const init = () => {
 	lazyLoad.init();
 	cases.init();
 	partners.init();
+	reviews.init();
 
 	resizeWidth = innerWidth;
 

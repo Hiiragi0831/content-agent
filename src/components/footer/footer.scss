@@ -1,109 +1,108 @@
 .footer {
-    position: relative;
-    z-index: 2;
-    background: #251a1a;
+	position: relative;
+	z-index: 2;
+	background: #251a1a;
 
-    &__info {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding-top: vc(35);
+	&__info {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding-top: vc(35);
 
-        @include devices {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
+		@include devices {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
 
-    &__logo {
-        margin-top: vc(5);
-        width: vc(263);
+	&__logo {
+		margin-top: vc(5);
+		width: vc(263);
 
-        @include devices {
-            margin: 0;
-            margin-bottom: vc(30);
-        }
-    }
+		@include devices {
+			margin: 0;
+			margin-bottom: vc(30);
+		}
+	}
 
-    &__sections {
-        h3 {
-            font-weight: 700;
-            font-size: vc(24);
-            line-height: vc(29);
-            color: $color-white;
-        }
+	&__sections {
+		h3 {
+			font-weight: 700;
+			font-size: vc(24);
+			line-height: vc(29);
+			color: $color-white;
+		}
 
-        &-section {
-            display: grid;
-            grid-template-areas: ". . ." ". . .";
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            margin-top: vc(20);
-            gap: 26px 50px;
+		&-section {
+			display: grid;
+			grid-template-areas: ". . ." ". . .";
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			margin-top: vc(20);
+			gap: 26px 50px;
 
-            a {
-                font-weight: 400;
-                font-size: vc(20);
-                line-height: vc(23);
-                color: $color-white;
-                opacity: 0.6;
-                transition: $transition;
+			a {
+				font-weight: 400;
+				font-size: vc(20);
+				line-height: vc(23);
+				color: $color-white;
+				opacity: 0.6;
+				transition: $transition;
 
-                &:hover {
-                    opacity: 1;
-                }
-            }
-        }
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
 
-        @include devices {
-            width: 100%;
-        }
-    }
+		@include devices {
+			width: 100%;
+		}
+	}
 
-    &__contacts {
-        h3 {
-            font-weight: 700;
-            font-size: vc(24);
-            line-height: vc(29);
-            color: $color-white;
-        }
+	&__contacts {
+		h3 {
+			font-weight: 700;
+			font-size: vc(24);
+			line-height: vc(29);
+			color: $color-white;
+		}
 
-        &-contact {
-            display: flex;
-            margin-top: vc(24);
-            gap: vc(30);
+		&-contact {
+			display: flex;
+			margin-top: vc(24);
+			gap: vc(30);
 
-            @include devices {
-                flex-direction: column;
-                margin-top: vc(0);
-            }
-        }
-    }
+			@include devices {
+				flex-direction: column;
+				margin-top: vc(0);
+			}
+		}
+	}
 
-    &__copyright {
-        margin-top: vc(40);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+	&__copyright {
+		margin-top: vc(40);
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-        p {
-            position: relative;
-            margin-top: vc(20);
-            padding-bottom: vc(20);
-            font-weight: 500;
-            font-size: vc(14);
-            line-height: vc(16);
-            text-align: center;
-            color: $color-white;
+		p {
+			position: relative;
+			margin-top: vc(20);
+			padding-bottom: vc(20);
+			font-weight: 500;
+			font-size: vc(14);
+			line-height: vc(16);
+			text-align: center;
 
-            @include devices {
-                font-weight: 400;
-                font-size: vc(12);
-                line-height: vc(14);
-                opacity: 0.6;
-            }
-        }
+			@include devices {
+				font-weight: 400;
+				font-size: vc(12);
+				line-height: vc(14);
+				opacity: 0.6;
+			}
+		}
 
-        @include devices {
-            margin-top: vc(30);
-        }
-    }
+		@include devices {
+			margin-top: vc(30);
+		}
+	}
 }

@@ -1,26 +1,26 @@
 .button {
-    flex-shrink: 0;
-    border-radius: vc(90);
-    padding: vc(16) vc(47);
-    font-weight: 500;
-    font-size: vc(16);
-    line-height: vc(19);
-    text-align: center;
+	flex-shrink: 0;
+	border-radius: vc(90);
+	padding: vc(16) vc(47);
+	font-weight: 500;
+	font-size: vc(16);
+	line-height: vc(19);
+	text-align: center;
 
-    &__primary {
-        color: $color-black;
-        background: $color-orange;
-        transition: background $transition;
+	&__primary {
+		color: $color-black;
+		background: $color-orange;
+		transition: background $transition;
 
-        &:hover {
-            background: $color-white;
-        }
-    }
+		&:hover {
+			background: $color-white;
+		}
+	}
 
-    @include devices {
-        order: 2;
-        padding: vc(9) vc(29);
-        font-size: vc(9);
-        line-height: vc(11);
-    }
+	@include devices {
+		order: 2;
+		padding: vc(9) vc(29);
+		font-size: vc(9);
+		line-height: vc(11);
+	}
 }

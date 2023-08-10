@@ -1,74 +1,68 @@
 .about-service {
-    margin-top: vc(163);
-    margin-bottom: vc(110);
+	margin-top: vc(163);
+	margin-bottom: vc(110);
 
-    @include devices {
-        margin-top: vc(40);
-        margin-bottom: vc(40);
-    }
+	&__row {
+		display: grid;
+		grid-template: auto 2fr / 1fr 1fr;
+		grid-template-areas:
+			"img title"
+			"img text";
+		gap: vc(20) vc(40);
 
-    .container {
-        display: flex;
-        gap: vc(40);
-    }
+		+ .about-service__row {
+			margin-top: vc(50);
 
-    &__img {
-        flex-shrink: 0;
-        width: vc(507);
-        height: vc(493);
+			@include devices {
+				margin-top: vc(20);
+			}
+		}
 
-        img {
-            background: #312323;
-            border: vc(3) solid #1D0B0B;
-            border-radius: vc(20);
-        }
-    }
+		&.right-img {
+			grid-template-areas:
+				"title img"
+				"text img";
+		}
 
-    &__title {
-        display: flex;
-        flex-direction: column;
-        gap: vc(30);
+		@include devices {
+			grid-template: 1fr / 1fr;
+			grid-template-areas:
+				"title"
+				"img"
+				"text";
+			gap: vc(10);
+		}
+	}
 
-        h2 {
-            font-weight: 700;
-            font-size: vc(48);
-            line-height: vc(58);
-            color: $color-white;
-        }
+	&__img {
+		flex-shrink: 0;
+		grid-area: img;
+		width: 100%;
 
-        p {
-            font-weight: 400;
-            font-size: vc(16);
-            line-height: 149%;
-            color: $color-white;
+		img {
+			border: vc(3) solid #1d0b0b;
+			border-radius: vc(20);
+			background: #312323;
+		}
+	}
 
-        }
-    }
+	&__title {
+		grid-area: title;
+	}
 
-    @include devices {
-        &__info {
-            display: flex;
-            flex-direction: column;
-            gap: vc(20);
+	&__text {
+		display: flex;
+		flex-direction: column;
+		grid-area: text;
+		gap: vc(24);
 
-            .h2 {
-                width: 100%;
-            }
+		@include devices {
+			gap: vc(20);
+		}
+	}
 
-            img {
-                width: vc(360);
-                height: vc(289);
-                background: #312323;
-                border: vc(3) solid #1D0B0B;
-                border-radius: vc(20);
-            }
-
-            p {
-                font-weight: 400;
-                font-size: vc(13);
-                line-height: 149%;
-                color: $color-white;
-            }
-        }
-    }
+	@include devices {
+		margin-top: vc(40);
+		margin-bottom: vc(40);
+	}
 }

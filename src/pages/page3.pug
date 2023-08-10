@@ -1,29 +1,37 @@
 extends @pug/base
 
 append globals
-    - pageName = 'page3'
-    - title = data[pageName]?.meta?.title ?? data.general.title
-    - description = data[pageName]?.meta?.description ?? data.general.description
-    - image = data[pageName]?.meta?.image ?? data.general.image
+	- pageName = 'page3'
+	- title = data[pageName]?.meta?.title ?? data.general.title
+	- description = data[pageName]?.meta?.description ?? data.general.description
+	- image = data[pageName]?.meta?.image ?? data.general.image
 
 append vars
-    - meta.keywords = data[pageName]?.meta?.keywords ?? data.general.keywords
+	- meta.keywords = data[pageName]?.meta?.keywords ?? data.general.keywords
 
-    each linkValue, linkKey in data.general.link
-        - link[linkKey] = linkValue
+	each linkValue, linkKey in data.general.link
+		- link[linkKey] = linkValue
 
-    each metaValue, metaKey in data.general.meta
-        - meta[metaKey] = metaValue
-    - body.classList = 'bg-image category-page'
+	each metaValue, metaKey in data.general.meta
+		- meta[metaKey] = metaValue
+	- body.classList = 'bg-image category-page'
 
 block content
-    +header()
-    main
-        +links()
-        +page-info()
-        +cases()
-        +advantages()
-        +beginning()
-        +reviews()
-        +about-service()
-    +footer()
+	+header()
+	main
+		+links()
+		+page-info({
+			title: "Съемки для ютуб, рутуб",
+			img: "filming",
+			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		})
+		+cases()
+		+advantages()
+		+beginning()
+		+reviews()
+		+about-service({
+			title: "О этой услуге",
+			img: "about-service-1",
+			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		})
+	+footer()

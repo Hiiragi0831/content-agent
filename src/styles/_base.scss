@@ -44,16 +44,25 @@ body {
 	overflow-x: hidden;
 	margin: 0;
 	width: 100%;
+	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
+	font-size: vc(16);
+	line-height: vc(24);
 	text-decoration-skip: objects;
 	text-rendering: optimizeLegibility;
 	text-size-adjust: 100%;
+	color: $color-white;
 	-webkit-tap-highlight-color: transparent;
 	background-color: #271c1c;
 
 	&.is-resizing {
 		opacity: 0;
 		pointer-events: none;
+	}
+
+	@include devices {
+		font-size: vc(14);
+		line-height: vc(20);
 	}
 }
 

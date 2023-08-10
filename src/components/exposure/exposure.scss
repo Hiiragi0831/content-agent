@@ -1,45 +1,44 @@
 .exposure {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-    &__icon {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: vc(1) solid $color-orange;
-        border-radius: 100%;
-        width: vc(42);
-        height: vc(42);
+	&__icon {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: vc(1) solid $color-orange;
+		border-radius: 100%;
+		width: vc(42);
+		height: vc(42);
 
-        svg {
-            position: relative;
-            width: vc(18);
-            height: vc(18);
-        }
-    }
+		svg {
+			position: relative;
+			width: vc(18);
+			height: vc(18);
+		}
+	}
 
-    &__info {
-        display: flex;
-        flex-direction: column;
-        margin-left: vc(50);
+	&__info {
+		display: flex;
+		flex-direction: column;
+		margin-left: vc(50);
 
-        p {
-            font-weight: (300);
-            font-size: vc(15);
-            color: #fff;
-            opacity: 0.6;
-        }
+		p {
+			font-weight: 300;
+			font-size: vc(15);
+			opacity: 0.6;
+		}
 
-        a {
-            font-weight: (500);
-            font-size: vc(18);
-            color: #fff;
-            transition: color $transition;
+		a {
+			font-weight: (500);
+			font-size: vc(18);
+			color: #fff;
+			transition: color $transition;
 
-            &:hover {
-                color: $color-orange;
-            }
-        }
-    }
+			&:hover {
+				color: $color-orange;
+			}
+		}
+	}
 }

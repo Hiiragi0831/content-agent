@@ -1,13 +1,13 @@
 .beginning {
-    margin-top: vc(100);
+	margin-top: vc(100);
 
-    @include devices {
-        margin-top: vc(40);
-    }
+	.h2 {
+		@include devices {
+			width: 100%;
+		}
+	}
 
-    .h2 {
-        @include devices {
-            width: 100%;
-        }
-    }
+	@include devices {
+		margin-top: vc(40);
+	}
 }

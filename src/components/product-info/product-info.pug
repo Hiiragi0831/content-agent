@@ -1,0 +1,51 @@
+mixin product-info()
+	.product-info
+		.container
+			.product-info__row
+				.product-info__title
+					h2.h2.for-desktop Семейные видео
+				.product-info__img
+					.product-info__img_main
+						+picture({
+							path: `${baseDir}assets/images/product-info/1`,
+							ext: `png`,
+						})
+					.product-info__img_secondary
+						+picture({
+							path: `${baseDir}assets/images/product-info/2`,
+							ext: `png`,
+						})
+						+picture({
+							path: `${baseDir}assets/images/product-info/3`,
+							ext: `png`,
+						})
+						+picture({
+							path: `${baseDir}assets/images/product-info/4`,
+							ext: `png`,
+						})
+				.product-info__info
+					.product-info__abilities
+						.product-info__abilities-price
+							p Стоимость услуги:
+							h3 1 500 Р
+						.product-info__abilities-data
+							p Время выполнения:
+							h3 2 дня
+					.product-info__description
+						h3 Описание:
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					.product-info__payment
+						.product-info__payment-way
+							p Способо оплаты:
+							.product-info__payment-logos
+								+svg("visa")
+								+svg("mastercard")
+								+svg("mir")
+						.product-info__payment-order
+							+button("Заказать услугу", "#")
+
+
+
+
+
+

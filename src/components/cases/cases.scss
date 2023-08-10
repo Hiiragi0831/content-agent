@@ -1,153 +1,151 @@
 .cases {
-    &__row {
-        display: flex;
-        justify-content: space-between;
-        gap: vc(78);
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		gap: vc(78);
 
-        @include devices {
-            flex-direction: column;
-            gap: vc(10);
-        }
-    }
+		@include devices {
+			flex-direction: column;
+			gap: vc(10);
+		}
+	}
 
-    &__case {
-        position: relative;
-        flex-shrink: 0;
-        width: vc(425);
+	&__case {
+		position: relative;
+		flex-shrink: 0;
+		width: vc(425);
 
-        img {
-            position: absolute;
-            left: vc(30);
-            width: vc(130);
-            height: vc(198);
-        }
+		img {
+			position: absolute;
+			left: vc(30);
+			width: vc(130);
+			height: vc(198);
+		}
 
-        @include devices {
-            width: 100%;
-        }
-    }
+		@include devices {
+			width: 100%;
+		}
+	}
 
-    &__swipper {
-        position: absolute;
-        left: vc(250);
-        top: vc(220);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: vc(195);
-        height: vc(83);
-        gap: vc(30);
+	&__swipper {
+		position: absolute;
+		left: vc(250);
+		top: vc(220);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: vc(195);
+		height: vc(83);
+		gap: vc(30);
 
-        &-arrow {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: vc(2) solid #f3c934;
-            border-radius: 100%;
-            width: vc(83);
-            height: vc(83);
-            background: rgba(55, 39, 40, 0.6);
-            transition: opacity $transition;
-            cursor: pointer;
+		&-arrow {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: vc(2) solid #f3c934;
+			border-radius: 100%;
+			width: vc(83);
+			height: vc(83);
+			background: rgba(55, 39, 40, 0.6);
+			transition: opacity $transition;
+			cursor: pointer;
 
-            svg {
-                position: relative;
-                width: vc(50);
-                height: vc(50);
-            }
+			svg {
+				position: relative;
+				width: vc(50);
+				height: vc(50);
+			}
 
-            &.swiper-button-disabled {
-                opacity: 0.7;
-            }
-        }
-    }
+			&.swiper-button-disabled {
+				opacity: 0.7;
+			}
+		}
+	}
 
-    &__works {
-        display: flex;
-        align-items: center;
-        border: vc(3) solid #1d0b0b;
-        border-radius: vc(20);
-        padding: vc(20) vc(27) vc(35) vc(20);
-        background: rgba(49, 35, 35, 0.6);
-        gap: vc(20);
+	&__works {
+		display: flex;
+		align-items: center;
+		border: vc(3) solid #1d0b0b;
+		border-radius: vc(20);
+		padding: vc(20) vc(27) vc(35) vc(20);
+		background: rgba(49, 35, 35, 0.6);
+		gap: vc(20);
 
-        img {
-            width: vc(191);
-            height: vc(182);
+		img {
+			width: vc(191);
+			height: vc(182);
 
-            @include devices {
-                width: vc(100);
-                height: vc(95);
-            }
-        }
+			@include devices {
+				width: vc(100);
+				height: vc(95);
+			}
+		}
 
-        &_work {
-            display: flex;
-            flex-direction: column;
-            gap: vc(11);
+		&_work {
+			display: flex;
+			flex-direction: column;
+			gap: vc(11);
 
-            h3 {
-                font-weight: 700;
-                font-size: vc(24);
-                line-height: vc(29);
-                color: $color-white;
+			h3 {
+				font-weight: 700;
+				font-size: vc(24);
+				line-height: vc(29);
+				color: $color-white;
 
-                @include devices {
-                    font-weight: 500;
-                    font-size: vc(16);
-                    line-height: vc(19);
-                }
-            }
+				@include devices {
+					font-weight: 500;
+					font-size: vc(16);
+					line-height: vc(19);
+				}
+			}
 
-            p {
-                font-weight: 400;
-                font-size: vc(14);
-                line-height: vc(21);
-                color: $color-white;
+			p {
+				font-size: vc(14);
+				line-height: vc(21);
 
-                @include devices {
-                    font-weight: 400;
-                    font-size: vc(10);
-                    line-height: vc(14);
-                }
-            }
+				@include devices {
+					font-weight: 400;
+					font-size: vc(10);
+					line-height: vc(14);
+				}
+			}
 
-            @include devices {
-                margin: 0;
-                gap: vc(10);
-            }
-        }
+			@include devices {
+				margin: 0;
+				gap: vc(10);
+			}
+		}
 
-        @include devices {
-            border: none;
-            padding: 0;
-            background: none;
-            gap: vc(17);
-        }
-    }
+		@include devices {
+			border: none;
+			padding: 0;
+			background: none;
+			gap: vc(17);
+		}
+	}
 
-    .swiper {
-        width: 100%;
-    }
+	.swiper {
+		width: 100%;
+	}
 
-    &__markers {
-        display: flex;
-        justify-content: center;
-        gap: vc(10);
-    }
+	&__markers {
+		display: flex;
+		justify-content: center;
+		gap: vc(10);
+	}
 
-    &__marker {
-        border-radius: 100%;
-        width: vc(12);
-        height: vc(12);
-        background-color: $color-white;
+	&__marker {
+		border-radius: 100%;
+		width: vc(12);
+		height: vc(12);
+		background-color: $color-white;
 
-        &-active {
-            background-color: $color-orange;
-        }
-    }
+		&-active {
+			background-color: $color-orange;
+		}
+	}
 
-    @include devices {
-        margin-top: vc(35);
-    }
+	@include devices {
+		margin-top: vc(35);
+	}
 }

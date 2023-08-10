@@ -1,67 +1,39 @@
 .about-company {
-    margin-top: vc(100);
+	margin-top: vc(100);
 
-    @include devices {
-        margin-top: vc(40);
-    }
+	&__about {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: vc(49);
+		gap: vc(96);
 
-    .container {}
+		@include devices {
+			flex-direction: column;
+			margin-bottom: vc(20);
+			gap: vc(10);
+		}
+	}
 
-    &__about {
-        margin-bottom: vc(49);
-        display: flex;
-        justify-content: space-between;
+	&__box {
+		display: flex;
+		flex-direction: column;
+		gap: vc(38);
+	}
 
-        @include devices {
-            flex-direction: column;
-            gap: vc(10);
-            margin-bottom: vc(20);
-        }
+	&__items {
+		display: grid;
+		grid-template: 1fr 1fr / 1fr 1fr 1fr;
+		grid-template-areas: ". . .";
+		gap: vc(21) vc(25);
 
-        .h2 {
-            margin-right: vc(96);
+		@include devices {
+			grid-template: 1fr 1fr / 1fr 1fr;
+			grid-template-areas: ". .";
+			gap: vc(20) vc(7);
+		}
+	}
 
-            @include devices {
-                width: 100%;
-            }
-        }
-
-        p {
-            font-style: normal;
-            font-weight: 400;
-            font-size: vc(18);
-            line-height: 149%;
-            color: $color-white;
-
-            @include devices {
-                font-size: vc(12);
-            }
-        }
-    }
-
-    &__box {
-        display: flex;
-        flex-direction: column;
-        gap: vc(38);
-    }
-
-    &__items {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: vc(21) vc(25);
-        grid-template-areas:
-        ". . ."
-        ". . .";
-
-        @include devices {
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            gap: vc(20) vc(7);
-            grid-template-areas:
-            ". ."
-            ". ."
-            ". .";
-        }
-    }
+	@include devices {
+		margin-top: vc(40);
+	}
 }

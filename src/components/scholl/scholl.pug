@@ -1,34 +1,33 @@
 mixin scholl()
-    .scholl
-        .container
-            .scholl__online
-                h2.h2 Онлайн школа
-            .scholl__service
-                -
-                    let data = [
-                        {
-                            icon: 'director',
-                            title: 'Сам себе режиссер'
-                        }, {
-                            icon: 'take-a-photo',
-                            title: 'Раз, два, три и ты фотобог'
-                        }, {
-                            icon: 'shared-vision',
-                            title: 'Рилс на миллион просмотров'
-                        }, {
-                            icon: 'reels',
-                            title: 'Как снять вирусное видео'
-                        }, {
-                            icon: 'reading-book',
-                            title: 'Захватывающий сторитейлинг'
-                        }
-                    ]
-                each item, i in data
-                    a.scholl__icons(href="#")
-                        .scholl__icons-item
-                            .scholl__icons-icon
-                                +svg(item.icon)
-                            .scholl__icons-title
-                                p= `0${i + 1}`
-                            .scholl__icons-text
-                                p!= item.title
+	.scholl
+		.container
+			h2.h2 Онлайн школа
+			.scholl__service
+				-
+					let data = [
+						{
+							icon: 'director',
+							title: 'Сам себе режиссер'
+						}, {
+							icon: 'take-a-photo',
+							title: 'Раз, два, три и ты фотобог'
+						}, {
+							icon: 'shared-vision',
+							title: 'Рилс на миллион просмотров'
+						}, {
+							icon: 'reels',
+							title: 'Как снять вирусное видео'
+						}, {
+							icon: 'reading-book',
+							title: 'Захватывающий сторитейлинг'
+						}
+					]
+				each item, i in data
+					a.scholl__icons(href="#")
+						.scholl__icons-item
+							.scholl__icons-icon
+								+svg(item.icon)
+							.scholl__icons-title
+								p= `0${i + 1}`
+							.scholl__icons-text
+								p!= item.title

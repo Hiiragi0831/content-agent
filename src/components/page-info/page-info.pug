@@ -1,11 +1,13 @@
-mixin page-info()
-    .page-info
-        .container
-            .page-info__box
-                h2.h2 Съемки для ютуб, рутуб
-                p.page-info__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                .page-info__img
-                    +picture({
-                        path: `${baseDir}assets/images/pages/filming`,
-                        ext: `png`,
-                    })
+mixin page-info(data)
+	.page-info
+		.container
+			.page-info__box
+				.page-info__title
+					h1.h2!= data.title
+				.page-info__text
+					p!= data.text
+				.page-info__img
+					+picture({
+						path: `${baseDir}assets/images/pages/${data.img}`,
+						ext: `png`,
+					})

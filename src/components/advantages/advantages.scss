@@ -1,29 +1,27 @@
 .advantages {
-    display: flex;
-    margin-top: vc(122);
+	display: flex;
+	margin-top: vc(122);
 
-    &__row {
-        display: flex;
-        justify-content: space-between;
-        gap: vc(70);
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		gap: vc(70);
 
-        @include devices {
-            flex-direction: column;
-            gap: vc(20);
-        }
-    }
+		@include devices {
+			flex-direction: column;
+			gap: vc(20);
+		}
+	}
 
-    &__title {
-        .h2 {
-            max-width: vc(335);
+	&__title {
+		max-width: vc(335);
 
-            @include devices {
-                width: 100%;
-            }
-        }
-    }
+		@include devices {
+			max-width: 100%;
+		}
+	}
 
-    @include devices {
-        margin-top: vc(40);
-    }
+	@include devices {
+		margin-top: vc(40);
+	}
 }
