@@ -13,7 +13,8 @@ import vhFix from '@scripts/modules/vh-fix';
 import {isDevices} from '@scripts/helpers/index';
 import cases from '../components/cases/cases';
 import partners from '../components/partners/partners';
-import reviews from "../components/reviews/reviews";
+import reviews from '../components/reviews/reviews';
+import productInfo from '../components/product-info/product-info';
 
 // eslint-disable-next-line no-underscore-dangle
 window._debounce = debounce;
@@ -45,6 +46,7 @@ const init = () => {
 	cases.init();
 	partners.init();
 	reviews.init();
+	productInfo.init();
 
 	resizeWidth = innerWidth;
 

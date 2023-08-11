@@ -63,24 +63,22 @@
 			}
 		}
 
-		&_send {
-			.button {
-				display: flex;
-				border-radius: vc(90);
-				padding: vc(15) vc(91) vc(16) vc(91);
-				font-weight: 700;
-				font-size: vc(16);
-				line-height: vc(19);
-				text-align: center;
+		.button {
+			display: flex;
+			border-radius: vc(90);
+			padding: vc(15) vc(91) vc(16) vc(91);
+			font-weight: 700;
+			font-size: vc(16);
+			line-height: vc(19);
+			text-align: center;
 
-				&__primary {
-					color: $color-black;
-					background: $color-orange;
-				}
+			&__primary {
+				color: $color-black;
+				background: $color-orange;
+			}
 
-				@include devices {
-					padding: vc(15) vc(104);
-				}
+			@include devices {
+				padding: vc(15) vc(104);
 			}
 		}
 

@@ -32,16 +32,14 @@
 		&_svg2 {
 			position: absolute;
 			left: 49%;
-			bottom: vc(-15);
+			bottom: 0;
 			z-index: -1;
+			width: vc(226);
+			height: vc(131);
 			transform: translateX(-50%);
 
 			svg {
 				fill: #1e1516;
-			}
-
-			@include devices {
-				bottom: vc(-20);
 			}
 		}
 

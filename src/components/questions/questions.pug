@@ -4,12 +4,9 @@ mixin questions()
 			.questions__title
 				h2 Остались вопросы? Оставьте данные и мы перезвоним
 			.questions__feelds
-				.questions__feelds_name
-					input(type="text" placeholder="Ваше имя")
-				.questions__feelds_namber
-					input(type="phone" placeholder="Номер телефона")
-				.questions__feelds_send
-					+button("Отправить", "#")
+				input(type="text" placeholder="Ваше имя")
+				input(type="phone" placeholder="Номер телефона")
+				+button("Отправить", "#")
 			.questions__social
 				.questions__social-item
 					+svg("pfone")

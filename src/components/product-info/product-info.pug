@@ -6,23 +6,59 @@ mixin product-info()
 					h2.h2.for-desktop Семейные видео
 				.product-info__img
 					.product-info__img_main
-						+picture({
-							path: `${baseDir}assets/images/product-info/1`,
-							ext: `png`,
-						})
+						.swiper
+							.swiper-wrapper
+								.swiper-slide
+									.image
+										+picture({
+											path: `${baseDir}assets/images/product-info/1`,
+											ext: `png`,
+										})
+								.swiper-slide
+									.image
+										+picture({
+											path: `${baseDir}assets/images/product-info/2`,
+											ext: `png`,
+										})
+								.swiper-slide
+									.image
+										+picture({
+											path: `${baseDir}assets/images/product-info/3`,
+											ext: `png`,
+										})
+								.swiper-slide
+									.image
+										+picture({
+											path: `${baseDir}assets/images/product-info/4`,
+											ext: `png`,
+										})
 					.product-info__img_secondary
-						+picture({
-							path: `${baseDir}assets/images/product-info/2`,
-							ext: `png`,
-						})
-						+picture({
-							path: `${baseDir}assets/images/product-info/3`,
-							ext: `png`,
-						})
-						+picture({
-							path: `${baseDir}assets/images/product-info/4`,
-							ext: `png`,
-						})
+						.swiper
+							.swiper-wrapper
+								.swiper-slide
+									.image
+										+picture({
+											path: `${baseDir}assets/images/product-info/1`,
+											ext: `png`,
+										})
+								.swiper-slide
+									.image
+										+picture({
+											path: `${baseDir}assets/images/product-info/2`,
+											ext: `png`,
+										})
+								.swiper-slide
+									.image
+										+picture({
+											path: `${baseDir}assets/images/product-info/3`,
+											ext: `png`,
+										})
+								.swiper-slide
+									.image
+										+picture({
+											path: `${baseDir}assets/images/product-info/4`,
+											ext: `png`,
+										})
 				.product-info__info
 					.product-info__abilities
 						.product-info__abilities-price
