@@ -80,4 +80,10 @@
         background-image: url("@images/bg/background.png");
         background-size: vc(1920);
     }
+
+	&--page {
+		&::before {
+			background-image: url("@images/bg/bg-page.jpg");
+		}
+	}
 }

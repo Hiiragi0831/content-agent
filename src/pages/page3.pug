@@ -14,11 +14,10 @@ append vars
 
 	each metaValue, metaKey in data.general.meta
 		- meta[metaKey] = metaValue
-	- body.classList = 'bg-image category-page'
 
 block content
 	+header()
-	main
+	main.bg-image
 		+links()
 		+page-info({
 			title: "Съемки для ютуб, рутуб",
